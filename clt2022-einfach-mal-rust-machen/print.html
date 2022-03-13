@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="ch00-basics.html"><strong aria-hidden="true">1.</strong> Grundlegendes zu Rust</a></li><li class="chapter-item expanded "><a href="ch01-topics.html"><strong aria-hidden="true">2.</strong> Grundlagen Teil 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-cargo.html"><strong aria-hidden="true">2.1.</strong> Cargo und unser erstes Program</a></li><li class="chapter-item expanded "><a href="ch01-02-types.html"><strong aria-hidden="true">2.2.</strong> Variablen, Funktionen, einfache Datentypen</a></li><li class="chapter-item expanded "><a href="ch01-03-structs.html"><strong aria-hidden="true">2.3.</strong> Selbstdefinierte Datentypen</a></li><li class="chapter-item expanded "><a href="ch01-04-memory.html"><strong aria-hidden="true">2.4.</strong> Speicherverwaltung</a></li><li class="chapter-item expanded "><a href="ch01-05-control.html"><strong aria-hidden="true">2.5.</strong> Kontrollfluß</a></li><li class="chapter-item expanded "><a href="ch01-99-task.html"><strong aria-hidden="true">2.6.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-topics.html"><strong aria-hidden="true">3.</strong> Grundlagen Teil 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-generics.html"><strong aria-hidden="true">3.1.</strong> Generics</a></li><li class="chapter-item expanded "><a href="ch02-02-ownership.html"><strong aria-hidden="true">3.2.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="ch02-03-lifetime.html"><strong aria-hidden="true">3.3.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="ch02-04-structure.html"><strong aria-hidden="true">3.4.</strong> Module, Crates und Sichtbarkeit</a></li><li class="chapter-item expanded "><a href="ch02-05-traits.html"><strong aria-hidden="true">3.5.</strong> Traits</a></li><li class="chapter-item expanded "><a href="ch02-99-task.html"><strong aria-hidden="true">3.6.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-tests.html"><strong aria-hidden="true">4.</strong> Unittests</a></li><li class="chapter-item expanded "><a href="ch04-async.html"><strong aria-hidden="true">5.</strong> Asynchrone Verarbeitung</a></li><li class="chapter-item expanded "><a href="ch03-webservice.html"><strong aria-hidden="true">6.</strong> Demo Webservice</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="programm.html"><strong aria-hidden="true">1.</strong> Programm</a></li><li class="chapter-item expanded "><a href="rust.html"><strong aria-hidden="true">2.</strong> Rust</a></li><li class="chapter-item expanded "><a href="ch01-topics.html"><strong aria-hidden="true">3.</strong> Grundlegendes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cargo.html"><strong aria-hidden="true">3.1.</strong> Cargo und unser erstes Program</a></li><li class="chapter-item expanded "><a href="types.html"><strong aria-hidden="true">3.2.</strong> Variablen, Funktionen, einfache Datentypen</a></li><li class="chapter-item expanded "><a href="structs.html"><strong aria-hidden="true">3.3.</strong> Selbstdefinierte Datentypen</a></li><li class="chapter-item expanded "><a href="control.html"><strong aria-hidden="true">3.4.</strong> Kontrollfluß</a></li><li class="chapter-item expanded "><a href="ch01-task.html"><strong aria-hidden="true">3.5.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-topics.html"><strong aria-hidden="true">4.</strong> Ownership-Konzept</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="memory.html"><strong aria-hidden="true">4.1.</strong> Speicherverwaltung</a></li><li class="chapter-item expanded "><a href="ownership.html"><strong aria-hidden="true">4.2.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="lifetime.html"><strong aria-hidden="true">4.3.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="ch02-task.html"><strong aria-hidden="true">4.4.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-topics.html"><strong aria-hidden="true">5.</strong> Abstraktionen</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="generics.html"><strong aria-hidden="true">5.1.</strong> Generics</a></li><li class="chapter-item expanded "><a href="traits.html"><strong aria-hidden="true">5.2.</strong> Traits</a></li><li class="chapter-item expanded "><a href="ch03-task.html"><strong aria-hidden="true">5.3.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch04-topics.html"><strong aria-hidden="true">6.</strong> Struktur, Tests, Dokumentation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="structure.html"><strong aria-hidden="true">6.1.</strong> Module, Crates und Sichtbarkeit</a></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">6.2.</strong> Testing</a></li><li class="chapter-item expanded "><a href="docs.html"><strong aria-hidden="true">6.3.</strong> Dokumentation</a></li></ol></li><li class="chapter-item expanded "><a href="async.html"><strong aria-hidden="true">7.</strong> Asynchrone Verarbeitung</a></li><li class="chapter-item expanded "><a href="webservice.html"><strong aria-hidden="true">8.</strong> Demo Webservice</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -143,13 +143,53 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2 id="was-ist-rust-eigentlich"><a class="header" href="#was-ist-rust-eigentlich">Was ist rust eigentlich?</a></h2>
+                        <h1 id="programm"><a class="header" href="#programm">Programm</a></h1>
+<ul>
+<li>Verschiedene Abschnitte in denen verschiedene Konstrukte vorgestellt werden</li>
+<li>Am Ende sollen alle in der Lage sein, eine Webservice mit <code>rocket</code> zu programmieren, was aber für heute kein muss ist</li>
+<li>Jeder Abschnitt enthält eine Übungsaufgabe, die zunächst alleine/in der Gruppe und dann gemeinsam gelöst werden kann</li>
+</ul>
+<h2 id="zu-mir"><a class="header" href="#zu-mir">Zu mir</a></h2>
+<ul>
+<li>Arbeite und lebe in Leipzig</li>
+<li>Engagiere mich im Hackspace des <a href="https://dezentrale.space">Dezentrale</a> eV, die Projekte bspw. anbietet wie
+<ul>
+<li><a href="https://hw4f.de">Hardware For Future</a></li>
+<li>Chaos macht Schule</li>
+<li>Freifunk</li>
+<li>Programmierrunde</li>
+<li>Elektronikrunde</li>
+<li>Techniksprechstunde</li>
+</ul>
+</li>
+<li>Programmiere hauptsächlich Python, C, Java</li>
+<li>Eher als Hobby Micropython, Erlang</li>
+<li>Rust habe ich vor 2,3 Jahren eher aus Interesse angefangen und konnte es irgendwann auch auf Arbeit einsetzen</li>
+<li>Auf Linux unterwegs seit fast 20 Jahren</li>
+<li>Rückfragen nach dem Workshop an <a href="mailto:alexander.boehm@malbolge.net?subject=CLT2022%20Rust%20Workshop">mich</a></li>
+<li>Workshop Unterlagen veröffentliche ich auf <a href="https://github.com/aboehm/clt2022-rust-workshop">github</a></li>
+</ul>
+<h2 id="wozu-wir-heute-nicht-kommen-werden"><a class="header" href="#wozu-wir-heute-nicht-kommen-werden">Wozu wir heute nicht kommen werden</a></h2>
+<ul>
+<li>Große Ausflüge in die Dokumentation</li>
+<li>Feature Verwaltung</li>
+<li>Makro-Programmierung</li>
+<li>C-Anbindung</li>
+</ul>
+<h2 id="vorstellungsrunde"><a class="header" href="#vorstellungsrunde">Vorstellungsrunde</a></h2>
+<ul>
+<li>Programmiert ihr im Alltag oder schreibt ihr eher Skripte?</li>
+<li>Womit programmiert ihr euren Alltag?</li>
+<li>Was habt ihr von Rust bisher gehört?</li>
+<li>Was ist eure Motivation Rust zu lernen?</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="was-ist-rust-eigentlich"><a class="header" href="#was-ist-rust-eigentlich">Was ist Rust eigentlich?</a></h2>
 <ul>
 <li>Programmiersprache für <a href="https://doc.rust-lang.org/nightly/rustc/platform-support.html">verschiedene Plattformen</a> wie x86, ARM, Webassembly für den Browser</li>
 <li>Sprache wird kompiliert und nicht interpretiert</li>
 <li>Kompiler heißt <code>rustc</code>, der auf LLVM basiert, GCC Frontend auch möglich</li>
 <li>Paketmanager heißt <code>cargo</code></li>
-<li>Bibliotheken sind in <code>crates</code> organisiert</li>
+<li>Bibliotheken/Anwendungen sind in <code>crates</code> organisiert</li>
 <li>Weiterentwicklung wird von der <a href="https://foundation.rust-lang.org/">Rust Foundation</a> organsiert, Gründer waren neben <a href="https://foundation.rust-lang.org/members/">Mozilla, u.a. Amazon, Google &amp; Huawei</a></li>
 </ul>
 <h2 id="ein-kurze-geschichte"><a class="header" href="#ein-kurze-geschichte">Ein kurze Geschichte</a></h2>
@@ -227,7 +267,7 @@
 <h2 id="installation"><a class="header" href="#installation">Installation</a></h2>
 <ul>
 <li>Vollständige Installation übr <a href="https://rustup.rs/">rustup.rs</a></li>
-<li>Alternative kann auch der <a href="https://rustup.rs/">Rust Playground</a> verwendet werden</li>
+<li>Alternativ kann auch der <a href="https://play.rust-lang.org/">Rust Playground</a> verwendet werden</li>
 </ul>
 <h1 id="lust-auf-mehr-rust"><a class="header" href="#lust-auf-mehr-rust">Lust auf mehr Rust</a></h1>
 <ul>
@@ -235,13 +275,18 @@
 <li><a href="https://doc.rust-lang.org/book/">Rust Book</a></li>
 <li><a href="https://doc.rust-lang.org/std/index.html">Dokumentation der Standardbibliothek</a></li>
 <li><a href="https://prev.rust-lang.org/de-DE/faq.html">FAQ</a></li>
+<li><a href="https://crates.io">Rust Pakete bei crates.io</a></li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="grundlagen-teil-1"><a class="header" href="#grundlagen-teil-1">Grundlagen Teil 1</a></h1>
-<h2 id="ziel"><a class="header" href="#ziel">Ziel</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="grundlagen"><a class="header" href="#grundlagen">Grundlagen</a></h1>
 <ul>
 <li>Erlernung der einfachen Handhabung von Rust Projekten mit Cargo</li>
-<li>Kenntnisse über einfachen Datentypen, Funktionen und den Kontrollfluß</li>
-<li>Erstellung eines einfachen Rechner</li>
+<li>Kenntnisse über 
+<ul>
+<li>einfachen Datentypen</li>
+<li>Funktionen</li>
+<li>Kontrollfluß</li>
+</ul>
+</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cargo"><a class="header" href="#cargo">Cargo</a></h1>
 <p>Zuerst erstellen wir ein Standardprojekt für eine Applikation</p>
@@ -301,7 +346,7 @@ edition = &quot;2021&quot;
 <p>Die <a href="Cargo.toml">Cargo.toml</a> zu diesem Projekt ist dann etwas komplexer.</p>
 <p>Die komplette Referenz, könnt ihr auf der <a href="https://doc.rust-lang.org/cargo/reference/manifest.html"><code>cargo</code>-Dokumentationseite</a> finden.</p>
 <h2 id="cargo-für-rust-programme"><a class="header" href="#cargo-für-rust-programme">Cargo für Rust Programme</a></h2>
-<p><code>cargo</code> kann nicht nur verwendet werden, um Rust Projekte zu erstellen und zu bauen. Es kann auch dazu verwnedet werden, um Applikationen zu installieren.</p>
+<p><code>cargo</code> kann nicht nur verwendet werden, um Rust Projekte zu erstellen und zu bauen. Es kann auch dazu verwendet werden, um Applikationen zu installieren.</p>
 <p>Beispielsweise um dieses Tutorial wurde <code>mdbook</code> verwendet, was mittels</p>
 <pre><code class="language-sh">cargo install mdbook
 </code></pre>
@@ -375,12 +420,9 @@ edition = &quot;2021&quot;
 </ul>
 <h2 id="funktionen"><a class="header" href="#funktionen">Funktionen</a></h2>
 <ul>
-<li>Funktionen müssen typisiert werden
-<ul>
+<li>Funktionen müssen typisiert werden</li>
 <li>die letzte Zeile gibt den Funktionswert zurück</li>
 <li>ist der letzte Zeile durch ein Semikolon beendet, ist der Typ leer</li>
-</ul>
-</li>
 </ul>
 <pre><pre class="playground"><code class="language-rust editable">fn void_func() -&gt; () {
     println!(&quot;void function&quot;);
@@ -420,6 +462,7 @@ fn main() {
 </ul>
 </li>
 <li>Gerade um den Kompiler bei der richtigen Implementierungswahl zu helfen, ist es of einfacher eine Variablendefintion zu Typisierungen</li>
+<li>Vielen Konvertieren können auch über Traits umgesetzt werden, dazu später mehr</li>
 </ul>
 <pre><pre class="playground"><code class="language-rust  editable"><span class="boring">fn main() {
 </span>    // Explizite Definition von Variablentypen
@@ -446,7 +489,7 @@ fn main() {
 <h2 id="referenzen"><a class="header" href="#referenzen">Referenzen</a></h2>
 <ul>
 <li>Die meist verbreiteste Referenz dürfte die zu einem einfachen String sein</li>
-<li>Referenzen müssen auch über dort verwendet werden, wo keine explizte Datentyp größe vorhanden ist bspw. generische Datentypen</li>
+<li>Referenzen müssen verwendet werden, wo keine explizte Datentypgröße vorhanden ist bspw. bei generische Datentypen</li>
 <li>Für referenzierte Werte gelten ebenfalls die Regeln für Veränderlichkeit, d.h. per Standard sind die referenzierte Daten unveränderbar</li>
 </ul>
 <pre><pre class="playground"><code class="language-rust editable"><span class="boring">fn main() {
@@ -525,6 +568,12 @@ struct Empty { }
 struct Wrapper(u32);
 
 impl OneValue {
+    fn new() -&gt; Self {
+        OneValue {
+            value: 0,
+        }
+    }
+
     fn do_something(&amp;self) {
         println!(&quot;My value is {}&quot;, self.value);
     }
@@ -541,9 +590,7 @@ impl Empty {
 }
 
 fn main() {
-    let mut one_value = OneValue {
-        value: 1,
-    };
+    let mut one_value = OneValue::new();
     one_value.do_something();
     one_value.change_something();
 
@@ -594,82 +641,6 @@ fn main() {
     println!(&quot;{:?}&quot;, result);
 }
 </code></pre></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="speicherverwaltung"><a class="header" href="#speicherverwaltung">Speicherverwaltung</a></h1>
-<h2 id="clone-and-copy"><a class="header" href="#clone-and-copy">Clone and Copy</a></h2>
-<ul>
-<li>Standardmäßig sind bei eigensdefinierten Datentypen keine Kopierfunktionen vorhanden</li>
-<li>Für diesen Zweck definiert Rust zwei Traits
-<ul>
-<li><code>Copy</code>: Passiert implizit und führt eine bitweise Kopie der Variable durch</li>
-<li><code>Clone</code>: Muss explizt angefordert werden und k Bitweises kopieren erzeugt eine vollständige Kopie</li>
-<li>Jedes Objekt, welches Copy implementiert, implementiert auch Clone</li>
-<li>Aber nicht jedes Objekt, welches Clone implementiert, implementiert auch Copy</li>
-</ul>
-</li>
-<li><code>structs</code> können beispielsweise nicht duplizierbare Bestandteile haben</li>
-<li>In den meisten Fällen reicht jedoch ein Standardverhalten vorzuschreiben</li>
-<li>Für diesen Zwecks gibt es den <code>Clone</code>-Trait</li>
-<li>Um automatisch eine gültige Implementierung zu nutzen, kann das <code>derive</code>-Makro mit <code>Clone</code> verwendet werden</li>
-</ul>
-<pre><pre class="playground"><code class="language-rust">#[derive(Clone, Debug)]
-struct CloneableItem { value: u32, }
-
-#[derive(Clone, Copy, Debug)]
-struct CopyableItem { value: u32, }
-
-<span class="boring">fn main() {
-</span>    let item_cloneable = CloneableItem { value: 1 };
-    let item_cloned = item_cloneable.clone();
-
-    let item_copyable = CopyableItem { value: 2 };
-    let item_copied1 = item_copyable;
-    let item_copied2 = item_copyable;
-
-    println!(&quot;Pointer:&quot;);
-    println!(&quot;Cloneable          {:p}&quot;, &amp;item_cloneable);
-    println!(&quot;Cloned             {:p}&quot;, &amp;item_cloned);
-    println!(&quot;Copyable           {:p}&quot;, &amp;item_copyable);
-    println!(&quot;Copied 1st         {:p}&quot;, &amp;item_copied1);
-    println!(&quot;Copied 2nd         {:p}&quot;, &amp;item_copied2);
-}
-</code></pre></pre>
-<h2 id="speicherobjekte-auf-dem-heap"><a class="header" href="#speicherobjekte-auf-dem-heap">Speicherobjekte auf dem Heap</a></h2>
-<ul>
-<li>Nicht immer ist es möglich Speicher zu auf dem Stack zu verwalten
-<ul>
-<li>Speicherbereich kann zu begrenzt sein</li>
-<li>Instanzen müssen an vielen Stellen referenziert und verändert werden</li>
-</ul>
-</li>
-<li>Für diesen Zweck gibt es den Box-Typ</li>
-<li>Bei der Instanziierung wird ein Speicherbereich auf dem Heap allokiert</li>
-<li>Wird die <code>Box</code> nicht mehr gebraucht, dann wird der Bereich wieder freigegeben</li>
-</ul>
-<pre><pre class="playground"><code class="language-rust editable"><span class="boring">fn main() {
-</span>    // Object auf dem Heap anlegen
-    let heap_var: Box&lt;[u32]&gt; = Box::new([42u32; 4096]);
-    // Dereferenzierung für einen Zugriff
-    println!(&quot;heap_var = {}&quot;, heap_var[0]);
-
-<span class="boring">}
-</span></code></pre></pre>
-<h2 id="dynamische-listen"><a class="header" href="#dynamische-listen">Dynamische Listen</a></h2>
-<ul>
-<li>Gerade bei veränderlichen Listen sind die statischen Arrays hinderlich</li>
-<li>Hierfür kann der generische Datentyp <code>Vec</code> genutzt werden</li>
-</ul>
-<pre><pre class="playground"><code class="language-rust editable"><span class="boring">fn main() {
-</span>    let integer_array = vec![1, 2, 3];
-    // explizt typisiert
-    let integer_array: Vec&lt;i32&gt; = vec![1, 2, 3];
-
-    // Für die Veränderung einer Liste, muss diese wieder mit `mut` gekennzeichnet werden
-    let mut list = vec![];
-    list.push(1);
-    list.push(2);
-    println!(&quot;list = {:?}&quot;, list);
-<span class="boring">}
-</span></code></pre></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kontrollfluß-nund-funktionen"><a class="header" href="#kontrollfluß-nund-funktionen">Kontrollfluß nund Funktionen</a></h1>
 <h2 id="ifthenelse"><a class="header" href="#ifthenelse">If/Then/Else</a></h2>
 <pre><pre class="playground"><code class="language-rust editable"><span class="boring">fn main() {
@@ -797,138 +768,131 @@ fn main() {
 <span class="boring">}
 </span></code></pre></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="aufgabe-rechner"><a class="header" href="#aufgabe-rechner">Aufgabe: Rechner</a></h1>
-<h2 id="ziel-1"><a class="header" href="#ziel-1">Ziel</a></h2>
+<h2 id="ziel"><a class="header" href="#ziel">Ziel</a></h2>
 <ul>
 <li>Schreibt einen einfachen Rechner</li>
-<li>Es wird
-<ul>
-<li>Eine Zahl eingelesen</li>
-<li>Eine Operation (+ - * /) eingelesen</li>
-<li>Eine zweite Zahl eingelesen</li>
+<li>Operand <code>a</code> ist eine Zahl</li>
+<li>Operator <code>op</code> ist ein String</li>
 <li>Das Ergebnis wird ausgerechnet und ausgegeben</li>
-</ul>
-</li>
-<li>Sollte Rust Playground im Browser verwendet werden, dann können auch statische Werte in der <code>main</code> Methode verwendet werden</li>
-<li>20 Minuten</li>
 </ul>
 <h2 id="hilfen"><a class="header" href="#hilfen">Hilfen</a></h2>
 <p>Folgende Datei könnt ihr als Ausgangsgrundlage nutzen</p>
-<pre><pre class="playground"><code class="language-rust editable should_panic">#![allow(dead_code)]
-#![allow(unused_must_use)]
-#![allow(unused_variables)]
-#![allow(unused_imports)]
-
-use std::io;
-
-enum Operation {
-    ADD,
+<pre><pre class="playground"><code class="language-rust editable should_panic">enum Operation {
+    Add,
     // TODO: Operation hinzufügen
 }
 
 /// Führt eine Operation aus
-fn operate(a: i32, op: Operation, b: i32) -&gt; Result&lt;i32, &amp;'static str&gt; {
+fn operate(a: i32, op: Operation, b: i32) -&gt; Result&lt;i32, String&gt; {
 
     // TODO: Operation implementieren
 
-    Err(&quot;Not implemented&quot;)
+    Err(&quot;Not implemented&quot;.to_string())
 }
 
-/// Liest eine Zahl
-fn read_integer_from_stdin() -&gt; Result&lt;i32, &amp;'static str&gt; {
-    println!(&quot;Value? &quot;);
-    let mut input = String::new();
-    io::stdin().read_line(&amp;mut input).unwrap();
-    input.trim().parse().map_err(|_| &quot;Not a number&quot;)
-}
-
-/// Liest eine Operation
-fn read_op_from_stdin() -&gt; Result&lt;Operation, &amp;'static str&gt; {
-    println!(&quot;Operation? &quot;);
-    let mut input = String::new();
-    io::stdin().read_line(&amp;mut input).unwrap();
-    match input.trim() {
-        &quot;+&quot; =&gt; Ok(Operation::ADD),
-
-        // TODO: String auf Opertation abbilden
-
-        _   =&gt; Err(&quot;Operation not implemented&quot;),
+/// Wandelt ein Operations-String in eine Operation um
+fn map_string_to_operation(input: &amp;str) -&gt; Result&lt;Operation, String&gt; {
+    match input {
+        &quot;+&quot; =&gt; Ok(Operation::Add),
+        // TODO: Operation ergänzen
+        _   =&gt; Err(&quot;Operation not implemented&quot;.to_string()),
     }
 }
 
-fn main() -&gt; Result&lt;(), &amp;'static str&gt; {
-    // TODO: Werte einlesen
-    // let a = read_integer_from_stdin()?;
+fn main() -&gt; Result&lt;(), String&gt; {
+    let a = 1;
+    let op = &quot;-&quot;;
+    let b = 2;
 
-    println!(&quot;Result: {}&quot;, operate(1, Operation::ADD, 2)?);
+    println!(&quot;Result: {}&quot;, operate(a, map_string_to_operation(op)?, b)?);
     Ok(())
 }
 </code></pre></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="grundlagen-teil-2"><a class="header" href="#grundlagen-teil-2">Grundlagen Teil 2</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="generics"><a class="header" href="#generics">Generics</a></h1>
+<h2 id="musterlösung"><a class="header" href="#musterlösung">Musterlösung</a></h2>
 <ul>
-<li>Rust übernimmt für Generics ähnliche Konstrukte wie bei C++ oder Java</li>
-<li>Auch hier spielt die Typeninferenz wieder eine Rolle, da die konkreten Typen aus dem Zusammenhang geschlußfolgert werden können</li>
-<li>Konkrete  müssen nicht zur Laufzeit instanziiert und dann konvertiert werden</li>
+<li><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2021&amp;gist=f764782a023d3e436e1c66cc4b967754">Rust Playground</a></li>
 </ul>
-<pre><pre class="playground"><code class="language-rust editable">struct MyGenericStruct&lt;T&gt; {
-    items: Vec&lt;T&gt;,
-}
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ownership-konzept"><a class="header" href="#ownership-konzept">Ownership-Konzept</a></h1>
+<ul>
+<li>Verständnis über den Umgang mit Speicher</li>
+<li>Konzept von Ownership, Borrow, Lifetimes zu verstehen</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="speicherverwaltung"><a class="header" href="#speicherverwaltung">Speicherverwaltung</a></h1>
+<h2 id="clone-and-copy"><a class="header" href="#clone-and-copy">Clone and Copy</a></h2>
+<ul>
+<li>Standardmäßig sind bei eigensdefinierten Datentypen keine Kopierfunktionen vorhanden</li>
+<li>Für diesen Zweck definiert Rust zwei Traits
+<ul>
+<li><code>Copy</code>: Passiert implizit und führt eine bitweise Kopie der Variable durch</li>
+<li><code>Clone</code>: Muss explizt angefordert werden und k Bitweises kopieren erzeugt eine vollständige Kopie</li>
+<li>Jedes Objekt, welches Copy implementiert, implementiert auch Clone</li>
+<li>Aber nicht jedes Objekt, welches Clone implementiert, implementiert auch Copy</li>
+</ul>
+</li>
+<li><code>structs</code> können beispielsweise nicht duplizierbare Bestandteile haben</li>
+<li>In den meisten Fällen reicht jedoch ein Standardverhalten vorzuschreiben</li>
+<li>Für diesen Zwecks gibt es den <code>Clone</code>-Trait</li>
+<li>Um automatisch eine gültige Implementierung zu nutzen, kann das <code>derive</code>-Makro mit <code>Clone</code> verwendet werden</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">#[derive(Clone, Debug)]
+struct CloneableItem { value: u32, }
 
-fn main() {
-    let struct_with_u32: MyGenericStruct&lt;u32&gt; = MyGenericStruct {
-        items: vec![],
-    };
+#[derive(Clone, Copy, Debug)]
+struct CopyableItem { value: u32, }
 
-    let struct_with_u16 = MyGenericStruct::&lt;u16&gt; {
-        items: Vec::new()
-    };
+<span class="boring">fn main() {
+</span>    let item_cloneable = CloneableItem { value: 1 };
+    let item_cloned = item_cloneable.clone();
 
-    let struct_with_u8 = MyGenericStruct {
-        items: Vec::&lt;u8&gt;::new()
-    };
+    let item_copyable = CopyableItem { value: 2 };
+    let item_copied1 = item_copyable;
+    let item_copied2 = item_copyable;
+
+    println!(&quot;Pointer:&quot;);
+    println!(&quot;Cloneable          {:p}&quot;, &amp;item_cloneable);
+    println!(&quot;Cloned             {:p}&quot;, &amp;item_cloned);
+    println!(&quot;Copyable           {:p}&quot;, &amp;item_copyable);
+    println!(&quot;Copied 1st         {:p}&quot;, &amp;item_copied1);
+    println!(&quot;Copied 2nd         {:p}&quot;, &amp;item_copied2);
 }
 </code></pre></pre>
+<h2 id="speicherobjekte-auf-dem-heap"><a class="header" href="#speicherobjekte-auf-dem-heap">Speicherobjekte auf dem Heap</a></h2>
 <ul>
-<li>Generische Typen können konkrete Implementierungen nur für einen Typ besitzen</li>
-</ul>
-<pre><pre class="playground"><code class="language-rust editable">struct MyGenericStruct&lt;T&gt; {
-    a: T,
-    b: T,
-}
-
-impl MyGenericStruct&lt;i32&gt; {
-    fn sum(&amp;self) -&gt; i32 {
-        self.a + self.b
-    }
-}
-
-fn main() {
-    // Für i32 liegt eine Implementierung vor, u32 Typen können nicht verarbeitet werden
-    MyGenericStruct { a: 1, b: 2 }.sum();
-}
-</code></pre></pre>
+<li>Nicht immer ist es möglich Speicher zu auf dem Stack zu verwalten
 <ul>
-<li>Auch für generische Typen können generische Implementierungen verwendet werden</li>
-<li>Um dies aber nutzen zu können, müssen wir bedingungen an unsere Generics knüpfen</li>
+<li>Speicherbereich kann zu begrenzt sein</li>
+<li>Instanzen müssen an vielen Stellen referenziert und verändert werden</li>
 </ul>
-<pre><pre class="playground"><code class="language-rust editable">struct MyGenericStruct&lt;T&gt; {
-    a: T,
-    b: T,
-}
+</li>
+<li>Für diesen Zweck gibt es den Box-Typ</li>
+<li>Bei der Instanziierung wird ein Speicherbereich auf dem Heap allokiert</li>
+<li>Wird die <code>Box</code> nicht mehr gebraucht, dann wird der Bereich wieder freigegeben</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable"><span class="boring">fn main() {
+</span>    // Object auf dem Heap anlegen
+    let heap_var: Box&lt;[u32]&gt; = Box::new([42u32; 4096]);
+    // Dereferenzierung für einen Zugriff
+    println!(&quot;heap_var = {}&quot;, heap_var[0]);
 
-impl&lt;T&gt; MyGenericStruct&lt;T&gt; where T: std::ops::Add&lt;Output=T&gt;, T: std::marker::Copy {
-    fn sum(&amp;self) -&gt; T {
-        self.a + self.b
-    }
-}
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="dynamische-listen"><a class="header" href="#dynamische-listen">Dynamische Listen</a></h2>
+<ul>
+<li>Gerade bei veränderlichen Listen sind die statischen Arrays hinderlich</li>
+<li>Hierfür kann der generische Datentyp <code>Vec</code> genutzt werden</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable"><span class="boring">fn main() {
+</span>    let integer_array = vec![1, 2, 3];
+    // explizt typisiert
+    let integer_array: Vec&lt;i32&gt; = vec![1, 2, 3];
 
-fn main() {
-    MyGenericStruct { a: 1i32, b: 2i32 }.sum();
-    MyGenericStruct { a: 3u32, b: 4u32 }.sum();
-    MyGenericStruct { a: 5i8, b: 6i8 }.sum();
-    MyGenericStruct { a: 7.1, b: 8.2 }.sum();
-}
-</code></pre></pre>
+    // Für die Veränderung einer Liste, muss diese wieder mit `mut` gekennzeichnet werden
+    let mut list = vec![];
+    list.push(1);
+    list.push(2);
+    println!(&quot;list = {:?}&quot;, list);
+<span class="boring">}
+</span></code></pre></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ownership"><a class="header" href="#ownership">Ownership</a></h1>
 <h2 id="das-grundsätzliche-problem"><a class="header" href="#das-grundsätzliche-problem">Das grundsätzliche Problem</a></h2>
 <ul>
@@ -1038,6 +1002,25 @@ fn main() {
     println!(&quot;a = {}&quot;, *a);
 <span class="boring">}
 </span></code></pre></pre>
+<ul>
+<li>Der C-Kompiler würde dies Problem zwar anmerken, das Programm idR. aber übersetzen</li>
+<li>Die Ausführung erzeugt einen Fehler</li>
+</ul>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+static int zero = 0; 
+
+int* func() { 
+    int b = 1;
+    return &amp;b;
+}
+
+int main(int argc, char* argv[]) {
+    int *a = &amp;zero;
+    a = func();
+    printf(&quot;%i\n&quot;, *a);
+}
+</code></pre>
 <h2 id="statische-laufzeit"><a class="header" href="#statische-laufzeit">Statische Laufzeit</a></h2>
 <ul>
 <li>Kurzfristige Lösung für viele Probleme mit der Lebenszeit von Objekten</li>
@@ -1080,52 +1063,124 @@ fn main() {
 <ul>
 <li><code>Rc</code> ist nicht nicht thread-safe, stattdessen sollte <code>Arc</code> verwendet werden</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="crates-module-sichtbarkeit"><a class="header" href="#crates-module-sichtbarkeit">Crates, Module, Sichtbarkeit</a></h1>
-<h1 id="module-und-sichtbarkeit"><a class="header" href="#module-und-sichtbarkeit">Module und Sichtbarkeit</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Übungsaufgabe"><a class="header" href="#Übungsaufgabe">Übungsaufgabe</a></h1>
+<h2 id="ziel-1"><a class="header" href="#ziel-1">Ziel</a></h2>
 <ul>
-<li>Crates können Applikationen oder Libraries für Funktionen, Datenstrukturen, Makros, ... sein</li>
-<li>Module bilden Namensräume die ganze oder nur Teile daraus über <code>use</code> importiert werden können</li>
-<li>Nur auf Datentypen, Funktionen und Module, die als <code>pub</code> deklariert sind, kann von außen zugegriffen werden</li>
+<li>Modelliert ein Freundschaftsnetzwerk</li>
+<li>Eine <code>struct Friend</code> soll lediglich einen namen enthalten</li>
+<li>Am Ende soll es möglich sein, eine Dreiecks-Bezeihung zu modellieren</li>
+<li>Bezieherungen zu Freunden sollen mittels Referenzen dargestellt werden</li>
+<li>Über einen Freund kann ich zu nächsten Freund navigieren</li>
 </ul>
-<pre><pre class="playground"><code class="language-rust editable">mod my_module {
-    pub struct MyPublicStruct { }
+<h2 id="hilfestellung"><a class="header" href="#hilfestellung">Hilfestellung</a></h2>
+<ul>
+<li>Ihr könnt für Listen den Typ <a href="https://doc.rust-lang.org/std/vec/struct.Vec.html"><code>Vec&lt;Friend&gt;</code></a> verwenden</li>
+<li>Dokumentation von <a href="https://doc.rust-lang.org/std/rc/struct.Rc.html"><code>Rc</code></a></li>
+<li>Dokumentation von <a href="https://doc.rust-lang.org/std/cell/struct.RefCell.html"><code>RefCell</code></a></li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable">#![allow(unused_imports)]
+#![allow(dead_code)]
 
-    impl MyPublicStruct {
-        pub fn public_func(&amp;self) { }
+use std::rc::Rc;
+use std::cell::RefCell;
 
-        fn private_func() { }
-    }
+struct Friend {
+    name: String,
+    // TODO: Liste mit Freunden definieren
+}
 
-    struct MyPrivateStruct { }
-
-    impl MyPrivateStruct {
-        fn func(&amp;self) { }
+impl Friend {
+    fn new(name: &amp;str) -&gt; Self {
+        Friend {
+            name: name.to_string(),
+            // TODO: Liste mit Freunden definieren
+        }
     }
 }
 
-use my_module::{MyPublicStruct};
+fn main() {
+    let a = Friend::new(&quot;Zero Cool&quot;);
+    let b = Friend::new(&quot;Acid Burn&quot;);
+    let c = Friend::new(&quot;Cereal Killer&quot;);
+
+    // TODO: Freundesnetzwerk erstellen
+}
+</code></pre></pre>
+<h2 id="musterlösung-1"><a class="header" href="#musterlösung-1">Musterlösung</a></h2>
+<ul>
+<li><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2021&amp;gist=73e6ff269b1eb0c5085a34eb9e3be79c">Rust Playground</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="wir-abstrahieren-uns-die-welt-wie-sie-uns-gefällt"><a class="header" href="#wir-abstrahieren-uns-die-welt-wie-sie-uns-gefällt">Wir abstrahieren uns die Welt, wie sie uns gefällt</a></h1>
+<ul>
+<li>Umgang mit generischen Datentypen und Implementierung</li>
+<li>Verwendung von Traits</li>
+<li>Zero Cost Abstractions kennenlernen</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="generics"><a class="header" href="#generics">Generics</a></h1>
+<ul>
+<li>Rust übernimmt für Generics ähnliche Konstrukte wie bei C++ oder Java</li>
+<li>Auch hier spielt die Typeninferenz wieder eine Rolle, da die konkreten Typen aus dem Zusammenhang geschlußfolgert werden können</li>
+<li>Konkrete  müssen nicht zur Laufzeit instanziiert und dann konvertiert werden</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable">struct MyGenericStruct&lt;T&gt; {
+    items: Vec&lt;T&gt;,
+}
 
 fn main() {
-    MyPublicStruct { }.public_func();
-    // alternativ, kann aber Probleme mit Traits machen
-    my_module::MyPublicStruct { }.public_func();
+    let struct_with_u32: MyGenericStruct&lt;u32&gt; = MyGenericStruct {
+        items: vec![],
+    };
+
+    let struct_with_u16 = MyGenericStruct::&lt;u16&gt; {
+        items: Vec::new()
+    };
+
+    let struct_with_u8 = MyGenericStruct {
+        items: Vec::&lt;u8&gt;::new()
+    };
 }
 </code></pre></pre>
 <ul>
-<li>Module können auch ohne weiteres in andere Dateien ausgelagert werden</li>
-<li>Hierfür muss nur der Modulname deklariert werden und der Kompiler bezieht die Datei mit ein</li>
+<li>Generische Typen können konkrete Implementierungen nur für einen Typ besitzen</li>
 </ul>
-<pre><code class="language-rust compile_fail noplayground should_panic">pub mod my_module;
+<pre><pre class="playground"><code class="language-rust editable">struct MyGenericStruct&lt;T&gt; {
+    a: T,
+    b: T,
+}
 
-use my_module::{MyPublicStruct};
+impl MyGenericStruct&lt;i32&gt; {
+    fn sum(&amp;self) -&gt; i32 {
+        self.a + self.b
+    }
+}
 
 fn main() {
-    MyPublicStruct { };
+    // Für i32 liegt eine Implementierung vor, u32 Typen können nicht verarbeitet werden
+    MyGenericStruct { a: 1, b: 2 }.sum();
 }
-</code></pre>
-<pre><code class="language-rust compile_fail noplayground should_panic">// my_module.rs oder my_module/mod.rs
-pub struct MyPublicStruct { }
-</code></pre>
+</code></pre></pre>
+<ul>
+<li>Auch für generische Typen können generische Implementierungen verwendet werden</li>
+<li>Damit er Kompiler dies richtig umsetzen kann, müssen wir ggf. Randbedingungen an unsere Generics stellen, welche Traits umgesetzt werden müssen</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable">struct MyGenericStruct&lt;T&gt; {
+    a: T,
+    b: T,
+}
+
+impl&lt;T&gt; MyGenericStruct&lt;T&gt; where T: std::ops::Add&lt;Output=T&gt;, T: std::marker::Copy {
+    fn sum(&amp;self) -&gt; T {
+        self.a + self.b
+    }
+}
+
+fn main() {
+    MyGenericStruct { a: 1i32, b: 2i32 }.sum();
+    MyGenericStruct { a: 3u32, b: 4u32 }.sum();
+    MyGenericStruct { a: 5i8, b: 6i8 }.sum();
+    MyGenericStruct { a: 7.1, b: 8.2 }.sum();
+}
+</code></pre></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="traits"><a class="header" href="#traits">Traits</a></h1>
 <ul>
 <li>Traits definieren ein gemeinsames Verhalten am ehsten Vergleichbar mit Interfaces</li>
@@ -1201,63 +1256,221 @@ fn main() {
 }
 
 </code></pre></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="Übungsaufgabe"><a class="header" href="#Übungsaufgabe">Übungsaufgabe</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Übungsaufgabe-1"><a class="header" href="#Übungsaufgabe-1">Übungsaufgabe</a></h1>
 <h2 id="ziel-2"><a class="header" href="#ziel-2">Ziel</a></h2>
 <ul>
-<li>Erweiterung unseres Rechners</li>
+<li>Ein einfacher String soll in einen Operationstyp umgewandelt werden</li>
+<li>Die Berechnung der Operation soll bei der Darstellung der Operationsdatenstruktur durchgeführt werden</li>
 </ul>
-<h1 id=""><a class="header" href="#"></a></h1>
-<pre><pre class="playground"><code class="language-rust should_panic">use std::io;
+<h2 id="hilfestellung-1"><a class="header" href="#hilfestellung-1">Hilfestellung</a></h2>
+<ul>
+<li>Traits für Rechenoperationen sind in <a href="https://doc.rust-lang.org/std/ops/index.html"><code>std::ops</code></a> definiert</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable should_panic">use std::convert::From;
+use std::fmt;
 
 #[derive(Debug)]
-enum Operation {
+enum OperationType {
     Add,
     Sub,
     Mul,
     Div,
 }
 
-fn operate(a: i32, op: Operation, b: i32) -&gt; Result&lt;i32, &amp;'static str&gt; {
-    match op {
-        Operation::Div =&gt; match b {
-            0 =&gt; Err(&quot;Division by Zero&quot;),
-            _ =&gt; Ok(a/b),
-        },
-        Operation::Add =&gt; Ok(a+b),
-        Operation::Sub =&gt; Ok(a-b),
-        Operation::Mul =&gt; Ok(a*b),
+#[derive(Debug)]
+struct Operation&lt;T&gt; {
+    a: T,
+    b: T,
+    op: OperationType,
+}
+
+impl&lt;T&gt; fmt::Display for Operation&lt;T&gt; 
+where
+    T: std::marker::Copy,
+    T: std::fmt::Display,
+    // TODO: weitere Trait-Anforderungen definieren
+{
+    fn fmt(&amp;self, formatter: &amp;mut fmt::Formatter) -&gt; fmt::Result {
+        write!(formatter, &quot;{}&quot;, &quot;Not implemented&quot;)
     }
 }
 
-fn read_integer_from_stdin() -&gt; Result&lt;i32, &amp;'static str&gt; {
-    println!(&quot;Value? &quot;);
-    let mut input = String::new();
-    io::stdin().read_line(&amp;mut input).unwrap();
-    input.trim().parse().map_err(|_| &quot;Not a number&quot;)
-}
-
-fn read_op_from_stdin() -&gt; Result&lt;Operation, &amp;'static str&gt; {
-    println!(&quot;Operation? &quot;);
-    let mut input = String::new();
-    io::stdin().read_line(&amp;mut input).unwrap();
-    match input.trim() {
-        &quot;+&quot; =&gt; Ok(Operation::Add),
-        &quot;-&quot; =&gt; Ok(Operation::Sub),
-        &quot;*&quot; =&gt; Ok(Operation::Mul),
-        &quot;/&quot; =&gt; Ok(Operation::Div),
-        _   =&gt; Err(&quot;Operation not implemented&quot;),
+impl From&lt;&amp;str&gt; for OperationType {
+    fn from(input: &amp;str) -&gt; Self {
+        match input {
+            // TODO: Mapping implementieren
+            _ =&gt; OperationType::Add,
+        }
     }
 }
 
-fn main() -&gt; Result&lt;(), &amp;'static str&gt; {
-    let a = read_integer_from_stdin()?;
-    let op = read_op_from_stdin()?;
-    let b = read_integer_from_stdin()?;
-    println!(&quot;Result: {}&quot;, operate(a, op, b).expect(&quot;A result&quot;));
+fn main() -&gt; Result&lt;(), String&gt; {
+    let op = Operation { a: 1, op: &quot;+&quot;.into(), b: 2};
+    println!(&quot;Result: {}&quot;, op);
     Ok(())
 }
 </code></pre></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="unittests"><a class="header" href="#unittests">Unittests</a></h1>
+<h2 id="musterlösung-2"><a class="header" href="#musterlösung-2">Musterlösung</a></h2>
+<ul>
+<li><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2021&amp;gist=027444cd6b3cf41be45e4ae3fad83d30">Rust Playground</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strukturierung-dokumentation-tests"><a class="header" href="#strukturierung-dokumentation-tests">Strukturierung, Dokumentation, Tests</a></h1>
+<ul>
+<li>Struktuierung und Aufteilung von Code</li>
+<li>Kenntnis von den Testmöglichkeiten</li>
+<li>Integrierte Dokumentation</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="crates-module-sichtbarkeit"><a class="header" href="#crates-module-sichtbarkeit">Crates, Module, Sichtbarkeit</a></h1>
+<ul>
+<li>Jedes Cargo Projekt ist automatisch ein <code>crate</code></li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable">struct MyStruct;
+
+fn main() {
+    let a = crate::MyStruct;
+}
+</code></pre></pre>
+<ul>
+<li>Applikationen, wenn nicht anders definiert, nutzen meist die Datei <code>main.rs</code></li>
+<li>Libraries, nutzen <code>lib.rs</code></li>
+</ul>
+<h1 id="module-und-sichtbarkeit"><a class="header" href="#module-und-sichtbarkeit">Module und Sichtbarkeit</a></h1>
+<ul>
+<li>Crates können Applikationen oder Libraries für Funktionen, Datenstrukturen, Makros, ... sein</li>
+<li>Module bilden Namensräume die ganze oder nur Teile daraus über <code>use</code> importiert werden können</li>
+<li>Nur auf Datentypen, Funktionen und Module, die als <code>pub</code> deklariert sind, kann von außen zugegriffen werden</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable">mod my_module {
+    pub struct MyPublicStruct { }
+
+    impl MyPublicStruct {
+        pub fn public_func(&amp;self) { }
+
+        fn private_func() { }
+    }
+
+    struct MyPrivateStruct { }
+
+    impl MyPrivateStruct {
+        fn func(&amp;self) { }
+    }
+}
+
+use my_module::{MyPublicStruct};
+
+fn main() {
+    MyPublicStruct { }.public_func();
+    // alternativ, kann aber Probleme mit Traits machen
+    my_module::MyPublicStruct { }.public_func();
+}
+</code></pre></pre>
+<ul>
+<li>Module können auch ohne weiteres in andere Dateien ausgelagert werden</li>
+<li>Hierfür muss nur der Modulname deklariert werden und der Kompiler bezieht die Datei mit ein</li>
+</ul>
+<pre><code class="language-rust compile_fail noplayground should_panic">pub mod my_module;
+
+use my_module::{MyPublicStruct};
+
+fn main() {
+    MyPublicStruct { };
+}
+</code></pre>
+<pre><code class="language-rust compile_fail noplayground should_panic">// my_module.rs oder my_module/mod.rs
+pub struct MyPublicStruct { }
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="testing"><a class="header" href="#testing">Testing</a></h1>
+<h2 id="unittests"><a class="header" href="#unittests">Unittests</a></h2>
+<ul>
+<li>Integriertes Testkonzept</li>
+<li><code>cargo test</code> führt die Tests aus</li>
+<li>Tests müssen nur mit den Makro <code>#[test]</code> markiert werden</li>
+<li>Framework erweitern die Testfunktionen bspw. um asynchrone Funktionen, sequentielle Ausführung etc</li>
+<li>Tests werden gerne in getrennte Testmodule verlagert</li>
+<li>Feature <code>test</code> wird bei der Ausführung aktiviert, mit dem Makro <code>#[cfg(test)]</code> wird dann nur für den Test der entsprechende Code kompiliert</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">fn main() { }
+</span>pub fn add_signed_int16(a: i16, b: i16) -&gt; i16 {
+    a + b
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn test_signed_add() {
+        assert_eq!(3, add_signed_int16(1, 2));
+        assert_eq!(-1, add_signed_int16(2, -3));
+    }
+}
+</code></pre></pre>
+<ul>
+<li>Auch testbar über den <a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2021&amp;gist=8ebf8119c94caa11dde4e5971152b173">Rust Playground</a></li>
+</ul>
+<h2 id="benchmarks"><a class="header" href="#benchmarks">Benchmarks</a></h2>
+<ul>
+<li>Cargo intergriert ebenfalls eine Benchmark Suite</li>
+<li>Wird über <code>cargo bench</code> aufgerufen</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dokumentation"><a class="header" href="#dokumentation">Dokumentation</a></h1>
+<ul>
+<li>Vollintegrierte Dokumentation</li>
+<li>Erstellung mit <code>cargo doc</code></li>
+<li>Paketdokumentation können auf <a href="https://docs.rs">docs.rs</a> gefunden werden</li>
+<li>Dokumentation von alle genutzten <code>crates</code> werden standardmäßig inkludiert</li>
+<li>Rust Code, der dokumentiert wird, wird für Libraries automatisch getest</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">/// Gibt das Ergebnis einer vorzeichenbehafteten Addition mit einem 16-Bit Integer zurück
+///
+/// # Argumente
+///
+/// * `a` - 1. Summand
+/// * `b` - 2. Summand
+///
+/// # Beispiele
+///
+/// ```rust
+/// add_signed_int16(1, 2);
+/// ```
+fn add_signed_int16(a: i16, b: i16) -&gt; i16 {
+    a + b
+}
+
+<span class="boring">fn main() { }
+</span></code></pre></pre>
+<h2 id="mdbook"><a class="header" href="#mdbook">mdbook</a></h2>
+<ul>
+<li>
+<p>Dieser Workshop wurde mittels <a href="https://github.com/rust-lang/mdBook">mdbook</a></p>
+</li>
+<li>
+<p>Alle Code läuft dabei durch einen Tests, wenn nicht besonders markiert</p>
+</li>
+<li>
+<p>Nutzt Standard Markdown mit ein paar Erweiterungen</p>
+</li>
+<li>
+<p>Installtion</p>
+</li>
+</ul>
+<pre><code class="language-sh">cargo install mdbook
+</code></pre>
+<ul>
+<li>Lokal anschauen</li>
+</ul>
+<pre><code class="language-sh">mdbook serve
+</code></pre>
+<ul>
+<li>HTML erzeugen</li>
+</ul>
+<pre><code class="language-sh">mdbook build
+</code></pre>
+<ul>
+<li>Testen</li>
+</ul>
+<pre><code class="language-sh">mdbook test
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="asynchrone-verarbeitung"><a class="header" href="#asynchrone-verarbeitung">Asynchrone Verarbeitung</a></h1>
 <ul>
 <li>Selbst heutige Mikrokontroller sind Mehrprozessorsystem</li>
@@ -1283,6 +1496,7 @@ fn main() -&gt; Result&lt;(), &amp;'static str&gt; {
 <li>Bekannte Vertreter für Runtimes sind <code>tokio</code> und <code>async-std</code></li>
 </ul>
 </li>
+<li>async Traits werden zurzeit nicht von Rust nativ unterstützt, dafür kann aber das <a href="https://github.com/dtolnay/async-trait">async-trait</a> crate genutzt werden</li>
 </ul>
 <h2 id="probleme-von-nebenläufigkeit"><a class="header" href="#probleme-von-nebenläufigkeit">Probleme von Nebenläufigkeit</a></h2>
 <h3 id="verwendung-von-gemeinsamen-speicher"><a class="header" href="#verwendung-von-gemeinsamen-speicher">Verwendung von gemeinsamen Speicher</a></h3>
@@ -1360,6 +1574,79 @@ async fn main() {
 }
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="demo-webservice"><a class="header" href="#demo-webservice">Demo Webservice</a></h1>
+<h2 id="ziel-3"><a class="header" href="#ziel-3">Ziel</a></h2>
+<ul>
+<li>Einfacher Service, der uns eine REST-artige Schnittstelle anbietet
+<ul>
+<li>Anlegen eines Wertes</li>
+<li>Verändern eines Wertes</li>
+<li>Löschen eines Wertes</li>
+<li>Umsetzung mit <a href="https://rocket.rs"><code>rocket</code></a></li>
+</ul>
+</li>
+<li>Datenbank soll unsere Daten halten
+<ul>
+<li>Zur Vereinfachung SQLite</li>
+<li>Daten werden nur im Speicher gehalten</li>
+<li>Umsetzung mit <a href="https://github.com/launchbadge/sqlx"><code>sqlx</code></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="vorgehen"><a class="header" href="#vorgehen">Vorgehen</a></h2>
+<ul>
+<li>Erstellen neues crate mit <code>cargo</code></li>
+</ul>
+<pre><code class="language-sh">cargo new webservice
+</code></pre>
+<ul>
+<li>Abhängigkeiten in der Cargo.toml definieren</li>
+</ul>
+<pre><code class="language-toml">[package]
+name = &quot;webservice&quot;
+version = &quot;0.1.0&quot;
+edition = &quot;2021&quot;
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = { version = &quot;0.5.0-rc.1&quot;, features = [&quot;json&quot;] }
+sqlx = { version = &quot;0.5&quot;, features = [&quot;sqlite&quot;, &quot;runtime-tokio-native-tls&quot;, &quot;uuid&quot;, &quot;chrono&quot;] }
+uuid = { version = &quot;0.8.2&quot;, features = [&quot;serde&quot;, &quot;v4&quot;] }
+async-trait = &quot;0.1.52&quot;
+tokio = &quot;*&quot;
+serde = &quot;*&quot;
+serde_json = &quot;*&quot;
+serial_test = &quot;0.6.0&quot;
+</code></pre>
+<ul>
+<li>Rumpffunktionen für <code>rocket</code> anlegen</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust compile_fail">#[macro_use]
+extern crate rocket;
+
+#[get(&quot;/&quot;)]
+fn index() -&gt; &amp;'static str {
+    &quot;Hallo CLT 2022&quot;
+}
+
+
+fn build_server() -&gt; rocket::Rocket&lt;rocket::Build&gt; {
+    rocket::build()
+        .mount(&quot;/&quot;, routes![index])
+}
+
+#[rocket::main]
+async fn main() {
+    build_server()
+        .launch()
+        .await
+        .unwrap();
+}
+
+#[cfg(test)]
+mod test {
+}
+</code></pre></pre>
 
                     </main>
 

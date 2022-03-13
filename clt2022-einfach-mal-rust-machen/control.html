@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Übungsaufgabe - Chemnitzer Linux Tage 2022 - Einfach mal rust machen</title>
+        <title>Kontrollfluß - Chemnitzer Linux Tage 2022 - Einfach mal rust machen</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="ch00-basics.html"><strong aria-hidden="true">1.</strong> Grundlegendes zu Rust</a></li><li class="chapter-item expanded "><a href="ch01-topics.html"><strong aria-hidden="true">2.</strong> Grundlagen Teil 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-cargo.html"><strong aria-hidden="true">2.1.</strong> Cargo und unser erstes Program</a></li><li class="chapter-item expanded "><a href="ch01-02-types.html"><strong aria-hidden="true">2.2.</strong> Variablen, Funktionen, einfache Datentypen</a></li><li class="chapter-item expanded "><a href="ch01-03-structs.html"><strong aria-hidden="true">2.3.</strong> Selbstdefinierte Datentypen</a></li><li class="chapter-item expanded "><a href="ch01-04-memory.html"><strong aria-hidden="true">2.4.</strong> Speicherverwaltung</a></li><li class="chapter-item expanded "><a href="ch01-05-control.html"><strong aria-hidden="true">2.5.</strong> Kontrollfluß</a></li><li class="chapter-item expanded "><a href="ch01-99-task.html" class="active"><strong aria-hidden="true">2.6.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-topics.html"><strong aria-hidden="true">3.</strong> Grundlagen Teil 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-generics.html"><strong aria-hidden="true">3.1.</strong> Generics</a></li><li class="chapter-item expanded "><a href="ch02-02-ownership.html"><strong aria-hidden="true">3.2.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="ch02-03-lifetime.html"><strong aria-hidden="true">3.3.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="ch02-04-structure.html"><strong aria-hidden="true">3.4.</strong> Module, Crates und Sichtbarkeit</a></li><li class="chapter-item expanded "><a href="ch02-05-traits.html"><strong aria-hidden="true">3.5.</strong> Traits</a></li><li class="chapter-item expanded "><a href="ch02-99-task.html"><strong aria-hidden="true">3.6.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-tests.html"><strong aria-hidden="true">4.</strong> Unittests</a></li><li class="chapter-item expanded "><a href="ch04-async.html"><strong aria-hidden="true">5.</strong> Asynchrone Verarbeitung</a></li><li class="chapter-item expanded "><a href="ch03-webservice.html"><strong aria-hidden="true">6.</strong> Demo Webservice</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="programm.html"><strong aria-hidden="true">1.</strong> Programm</a></li><li class="chapter-item expanded "><a href="rust.html"><strong aria-hidden="true">2.</strong> Rust</a></li><li class="chapter-item expanded "><a href="ch01-topics.html"><strong aria-hidden="true">3.</strong> Grundlegendes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cargo.html"><strong aria-hidden="true">3.1.</strong> Cargo und unser erstes Program</a></li><li class="chapter-item expanded "><a href="types.html"><strong aria-hidden="true">3.2.</strong> Variablen, Funktionen, einfache Datentypen</a></li><li class="chapter-item expanded "><a href="structs.html"><strong aria-hidden="true">3.3.</strong> Selbstdefinierte Datentypen</a></li><li class="chapter-item expanded "><a href="control.html" class="active"><strong aria-hidden="true">3.4.</strong> Kontrollfluß</a></li><li class="chapter-item expanded "><a href="ch01-task.html"><strong aria-hidden="true">3.5.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-topics.html"><strong aria-hidden="true">4.</strong> Ownership-Konzept</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="memory.html"><strong aria-hidden="true">4.1.</strong> Speicherverwaltung</a></li><li class="chapter-item expanded "><a href="ownership.html"><strong aria-hidden="true">4.2.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="lifetime.html"><strong aria-hidden="true">4.3.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="ch02-task.html"><strong aria-hidden="true">4.4.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-topics.html"><strong aria-hidden="true">5.</strong> Abstraktionen</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="generics.html"><strong aria-hidden="true">5.1.</strong> Generics</a></li><li class="chapter-item expanded "><a href="traits.html"><strong aria-hidden="true">5.2.</strong> Traits</a></li><li class="chapter-item expanded "><a href="ch03-task.html"><strong aria-hidden="true">5.3.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch04-topics.html"><strong aria-hidden="true">6.</strong> Struktur, Tests, Dokumentation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="structure.html"><strong aria-hidden="true">6.1.</strong> Module, Crates und Sichtbarkeit</a></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">6.2.</strong> Testing</a></li><li class="chapter-item expanded "><a href="docs.html"><strong aria-hidden="true">6.3.</strong> Dokumentation</a></li></ol></li><li class="chapter-item expanded "><a href="async.html"><strong aria-hidden="true">7.</strong> Asynchrone Verarbeitung</a></li><li class="chapter-item expanded "><a href="webservice.html"><strong aria-hidden="true">8.</strong> Demo Webservice</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -142,83 +142,142 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="aufgabe-rechner"><a class="header" href="#aufgabe-rechner">Aufgabe: Rechner</a></h1>
-<h2 id="ziel"><a class="header" href="#ziel">Ziel</a></h2>
+                        <h1 id="kontrollfluß-nund-funktionen"><a class="header" href="#kontrollfluß-nund-funktionen">Kontrollfluß nund Funktionen</a></h1>
+<h2 id="ifthenelse"><a class="header" href="#ifthenelse">If/Then/Else</a></h2>
+<pre><pre class="playground"><code class="language-rust editable"><span class="boring">fn main() {
+</span>    if true {
+        // wird ausgeführt
+    } else {
+        // wird nicht ausgeführt
+    }
+
+    let i = 3;
+    if i == 0 {
+        // ...
+    } else if i == 1 {
+        // ...
+    } else {
+        // ...
+    }
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="schleife"><a class="header" href="#schleife">Schleife</a></h2>
 <ul>
-<li>Schreibt einen einfachen Rechner</li>
-<li>Es wird
+<li>Einfache Schleife</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable"><span class="boring">fn main() {
+</span>    let mut i = 0;
+    loop {
+        if i &gt; 100 {
+            break;
+        }
+        i += 1;
+    }
+<span class="boring">}
+</span></code></pre></pre>
 <ul>
-<li>Eine Zahl eingelesen</li>
-<li>Eine Operation (+ - * /) eingelesen</li>
-<li>Eine zweite Zahl eingelesen</li>
-<li>Das Ergebnis wird ausgerechnet und ausgegeben</li>
+<li>For-Schleife</li>
 </ul>
-</li>
-<li>Sollte Rust Playground im Browser verwendet werden, dann können auch statische Werte in der <code>main</code> Methode verwendet werden</li>
-<li>20 Minuten</li>
+<pre><pre class="playground"><code class="language-rust editable"><span class="boring">fn main() {
+</span>    for i in 0..5 {
+        println!(&quot;i = {}&quot;, i);
+    }
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="match-operator"><a class="header" href="#match-operator">Match-Operator</a></h2>
+<pre><pre class="playground"><code class="language-rust editable"><span class="boring">fn main() {
+</span>    let num = 1;
+
+    let string: &amp;str = match num {
+        1 =&gt; &quot;One&quot;,
+        2 =&gt; &quot;Two&quot;,
+        3 =&gt; &quot;Three&quot;,
+        _ =&gt; &quot;Too lazy&quot;,
+    };
+
+    println!(&quot;Number {}&quot;, string);
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="elvis-operator"><a class="header" href="#elvis-operator">Elvis-Operator</a></h2>
+<ul>
+<li>Fehlerbehandling ist oft viel Schreibarbeit</li>
+<li>Der Elvis-Operator kann Vieles vereinfachen</li>
+<li>Wird ein fehlerhafter oder leerer Wert zurückgegeben</li>
 </ul>
-<h2 id="hilfen"><a class="header" href="#hilfen">Hilfen</a></h2>
-<p>Folgende Datei könnt ihr als Ausgangsgrundlage nutzen</p>
-<pre><pre class="playground"><code class="language-rust editable should_panic">#![allow(dead_code)]
-#![allow(unused_must_use)]
-#![allow(unused_variables)]
-#![allow(unused_imports)]
-
-use std::io;
-
-enum Operation {
-    ADD,
-    // TODO: Operation hinzufügen
-}
-
-/// Führt eine Operation aus
-fn operate(a: i32, op: Operation, b: i32) -&gt; Result&lt;i32, &amp;'static str&gt; {
-
-    // TODO: Operation implementieren
-
-    Err(&quot;Not implemented&quot;)
-}
-
-/// Liest eine Zahl
-fn read_integer_from_stdin() -&gt; Result&lt;i32, &amp;'static str&gt; {
-    println!(&quot;Value? &quot;);
-    let mut input = String::new();
-    io::stdin().read_line(&amp;mut input).unwrap();
-    input.trim().parse().map_err(|_| &quot;Not a number&quot;)
-}
-
-/// Liest eine Operation
-fn read_op_from_stdin() -&gt; Result&lt;Operation, &amp;'static str&gt; {
-    println!(&quot;Operation? &quot;);
-    let mut input = String::new();
-    io::stdin().read_line(&amp;mut input).unwrap();
-    match input.trim() {
-        &quot;+&quot; =&gt; Ok(Operation::ADD),
-
-        // TODO: String auf Opertation abbilden
-
-        _   =&gt; Err(&quot;Operation not implemented&quot;),
+<pre><pre class="playground"><code class="language-rust editable">fn do_something_error_prone(will_fail: bool) -&gt; Result&lt;String, String&gt; {
+    match will_fail {
+        false =&gt; Ok(&quot;Ok&quot;.to_string()),
+        true  =&gt; Err(&quot;Ups&quot;.to_string()),
     }
 }
 
-fn main() -&gt; Result&lt;(), &amp;'static str&gt; {
-    // TODO: Werte einlesen
-    // let a = read_integer_from_stdin()?;
+fn main() -&gt; Result&lt;(), String&gt; {
+    let result = do_something_error_prone(false)?;
+    println!(&quot;It's ok? {}&quot;, result);
 
-    println!(&quot;Result: {}&quot;, operate(1, Operation::ADD, 2)?);
+    let result = do_something_error_prone(false)?;
+    println!(&quot;It's also ok? {}&quot;, result);
     Ok(())
 }
 </code></pre></pre>
+<ul>
+<li>Die Behandlung von optionalen Werten kann mitunter auch viel Schreibarbeit sein</li>
+<li>Optionale Werte</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable">fn be_positive(num: i32) -&gt; Option&lt;i32&gt; {
+    if num &gt;= 0 {
+        Some(num)
+    } else {
+        None
+    }
+}
+
+fn check_number(num: i32) -&gt; Option&lt;i32&gt; {
+    let result: i32 = be_positive(num)?;
+    println!(&quot;Number {} is positive&quot;, result);
+    Some(result)
+}
+
+fn main() {
+    println!(&quot;Call with 1: {:?}&quot;, check_number(1));
+    println!(&quot;Call with 2: {:?}&quot;, check_number(2));
+    println!(&quot;Call with -1: {:?}&quot;, check_number(-1));
+}
+</code></pre></pre>
+<h2 id="dont-panic---but-panic"><a class="header" href="#dont-panic---but-panic">Don't Panic - but Panic</a></h2>
+<ul>
+<li>Es werden verschiede Konstrukte angeboten, um das Program sofort zu beenden
+<ul>
+<li><code>panic!</code> Makro</li>
+<li>Für Ergebnis Typen die Funktion <code>expect</code></li>
+</ul>
+</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable should_panic"><span class="boring">fn main() {
+</span>    panic!(&quot;Something really terrible happens&quot;);
+<span class="boring">}
+</span></code></pre></pre>
+<pre><pre class="playground"><code class="language-rust editable should_panic"><span class="boring">fn main() {
+</span>    let open_result: Result&lt;String, String&gt; = Ok(String::from(&quot;It's ok&quot;));
+    let result: String = open_result.expect(&quot;An ok&quot;);
+    println!(&quot;Ok? {:?}&quot;, result);
+
+    let open_result: Result&lt;String, String&gt; = Err(String::from(&quot;It's not ok&quot;));
+    let result = open_result.expect(&quot;An ok&quot;);
+    // Wird nicht mehr ausgeführt
+    println!(&quot;Ok? {:?}&quot;, result);
+<span class="boring">}
+</span></code></pre></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="ch01-05-control.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="structs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="ch02-topics.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="ch01-task.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -228,11 +287,11 @@ fn main() -&gt; Result&lt;(), &amp;'static str&gt; {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="ch01-05-control.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="structs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="ch02-topics.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="ch01-task.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

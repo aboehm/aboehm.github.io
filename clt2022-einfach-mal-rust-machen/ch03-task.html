@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Selbstdefinierte Datentypen - Chemnitzer Linux Tage 2022 - Einfach mal rust machen</title>
+        <title>Übungsaufgabe - Chemnitzer Linux Tage 2022 - Einfach mal rust machen</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="ch00-basics.html"><strong aria-hidden="true">1.</strong> Grundlegendes zu Rust</a></li><li class="chapter-item expanded "><a href="ch01-topics.html"><strong aria-hidden="true">2.</strong> Grundlagen Teil 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-cargo.html"><strong aria-hidden="true">2.1.</strong> Cargo und unser erstes Program</a></li><li class="chapter-item expanded "><a href="ch01-02-types.html"><strong aria-hidden="true">2.2.</strong> Variablen, Funktionen, einfache Datentypen</a></li><li class="chapter-item expanded "><a href="ch01-03-structs.html" class="active"><strong aria-hidden="true">2.3.</strong> Selbstdefinierte Datentypen</a></li><li class="chapter-item expanded "><a href="ch01-04-memory.html"><strong aria-hidden="true">2.4.</strong> Speicherverwaltung</a></li><li class="chapter-item expanded "><a href="ch01-05-control.html"><strong aria-hidden="true">2.5.</strong> Kontrollfluß</a></li><li class="chapter-item expanded "><a href="ch01-99-task.html"><strong aria-hidden="true">2.6.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-topics.html"><strong aria-hidden="true">3.</strong> Grundlagen Teil 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-generics.html"><strong aria-hidden="true">3.1.</strong> Generics</a></li><li class="chapter-item expanded "><a href="ch02-02-ownership.html"><strong aria-hidden="true">3.2.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="ch02-03-lifetime.html"><strong aria-hidden="true">3.3.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="ch02-04-structure.html"><strong aria-hidden="true">3.4.</strong> Module, Crates und Sichtbarkeit</a></li><li class="chapter-item expanded "><a href="ch02-05-traits.html"><strong aria-hidden="true">3.5.</strong> Traits</a></li><li class="chapter-item expanded "><a href="ch02-99-task.html"><strong aria-hidden="true">3.6.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-tests.html"><strong aria-hidden="true">4.</strong> Unittests</a></li><li class="chapter-item expanded "><a href="ch04-async.html"><strong aria-hidden="true">5.</strong> Asynchrone Verarbeitung</a></li><li class="chapter-item expanded "><a href="ch03-webservice.html"><strong aria-hidden="true">6.</strong> Demo Webservice</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="programm.html"><strong aria-hidden="true">1.</strong> Programm</a></li><li class="chapter-item expanded "><a href="rust.html"><strong aria-hidden="true">2.</strong> Rust</a></li><li class="chapter-item expanded "><a href="ch01-topics.html"><strong aria-hidden="true">3.</strong> Grundlegendes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cargo.html"><strong aria-hidden="true">3.1.</strong> Cargo und unser erstes Program</a></li><li class="chapter-item expanded "><a href="types.html"><strong aria-hidden="true">3.2.</strong> Variablen, Funktionen, einfache Datentypen</a></li><li class="chapter-item expanded "><a href="structs.html"><strong aria-hidden="true">3.3.</strong> Selbstdefinierte Datentypen</a></li><li class="chapter-item expanded "><a href="control.html"><strong aria-hidden="true">3.4.</strong> Kontrollfluß</a></li><li class="chapter-item expanded "><a href="ch01-task.html"><strong aria-hidden="true">3.5.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-topics.html"><strong aria-hidden="true">4.</strong> Ownership-Konzept</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="memory.html"><strong aria-hidden="true">4.1.</strong> Speicherverwaltung</a></li><li class="chapter-item expanded "><a href="ownership.html"><strong aria-hidden="true">4.2.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="lifetime.html"><strong aria-hidden="true">4.3.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="ch02-task.html"><strong aria-hidden="true">4.4.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-topics.html"><strong aria-hidden="true">5.</strong> Abstraktionen</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="generics.html"><strong aria-hidden="true">5.1.</strong> Generics</a></li><li class="chapter-item expanded "><a href="traits.html"><strong aria-hidden="true">5.2.</strong> Traits</a></li><li class="chapter-item expanded "><a href="ch03-task.html" class="active"><strong aria-hidden="true">5.3.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch04-topics.html"><strong aria-hidden="true">6.</strong> Struktur, Tests, Dokumentation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="structure.html"><strong aria-hidden="true">6.1.</strong> Module, Crates und Sichtbarkeit</a></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">6.2.</strong> Testing</a></li><li class="chapter-item expanded "><a href="docs.html"><strong aria-hidden="true">6.3.</strong> Dokumentation</a></li></ol></li><li class="chapter-item expanded "><a href="async.html"><strong aria-hidden="true">7.</strong> Asynchrone Verarbeitung</a></li><li class="chapter-item expanded "><a href="webservice.html"><strong aria-hidden="true">8.</strong> Demo Webservice</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -142,111 +142,74 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="selbstdefinierte-datentypen"><a class="header" href="#selbstdefinierte-datentypen">Selbstdefinierte Datentypen</a></h1>
+                        <h1 id="Übungsaufgabe"><a class="header" href="#Übungsaufgabe">Übungsaufgabe</a></h1>
+<h2 id="ziel"><a class="header" href="#ziel">Ziel</a></h2>
 <ul>
-<li>Datentypen werden über das Schlüsselwort <code>struct</code> definiert</li>
-<li>Datentypen können auch keinerlei Inhalt haben</li>
-<li>Wrapper für die Kappselung von anderen Datentypen</li>
-<li>Implementierungen für <code>structs</code></li>
-<li>Mittels Macros können verschiedene Eigenschaften hinzugefügt werden, bspw.
+<li>Ein einfacher String soll in einen Operationstyp umgewandelt werden</li>
+<li>Die Berechnung der Operation soll bei der Darstellung der Operationsdatenstruktur durchgeführt werden</li>
+</ul>
+<h2 id="hilfestellung"><a class="header" href="#hilfestellung">Hilfestellung</a></h2>
 <ul>
-<li>Kopierverhalten</li>
-<li>Bereitstellung einer Debug-Darstellung</li>
-<li>Sonstige Erweiterungen für bspw. Datenbankeigenschaften</li>
+<li>Traits für Rechenoperationen sind in <a href="https://doc.rust-lang.org/std/ops/index.html"><code>std::ops</code></a> definiert</li>
 </ul>
-</li>
-</ul>
-<pre><pre class="playground"><code class="language-rust editable">#[derive(Debug)]
-struct OneValue {
-    value: u32,
+<pre><pre class="playground"><code class="language-rust editable should_panic">use std::convert::From;
+use std::fmt;
+
+#[derive(Debug)]
+enum OperationType {
+    Add,
+    Sub,
+    Mul,
+    Div,
 }
 
 #[derive(Debug)]
-struct Empty { }
+struct Operation&lt;T&gt; {
+    a: T,
+    b: T,
+    op: OperationType,
+}
 
-#[derive(Debug)]
-struct Wrapper(u32);
-
-impl OneValue {
-    fn do_something(&amp;self) {
-        println!(&quot;My value is {}&quot;, self.value);
-    }
-
-    fn change_something(&amp;mut self) {
-        self.value += 1;
+impl&lt;T&gt; fmt::Display for Operation&lt;T&gt; 
+where
+    T: std::marker::Copy,
+    T: std::fmt::Display,
+    // TODO: weitere Trait-Anforderungen definieren
+{
+    fn fmt(&amp;self, formatter: &amp;mut fmt::Formatter) -&gt; fmt::Result {
+        write!(formatter, &quot;{}&quot;, &quot;Not implemented&quot;)
     }
 }
 
-impl Empty {
-    fn do_something_static() {
-        println!(&quot;A voice from the void&quot;);
+impl From&lt;&amp;str&gt; for OperationType {
+    fn from(input: &amp;str) -&gt; Self {
+        match input {
+            // TODO: Mapping implementieren
+            _ =&gt; OperationType::Add,
+        }
     }
 }
 
-fn main() {
-    let mut one_value = OneValue {
-        value: 1,
-    };
-    one_value.do_something();
-    one_value.change_something();
-
-    let empty = Empty { };
-    Empty::do_something_static();
-
-    let wrapped = Wrapper (1);
-
-    // Ausgabe über Debug-Macro
-    println!(&quot;one_value = {:?}&quot;, one_value);
-    println!(&quot;empty = {:?}&quot;, empty);
-    println!(&quot;wrapped = {:?}&quot;, wrapped);
+fn main() -&gt; Result&lt;(), String&gt; {
+    let op = Operation { a: 1, op: &quot;+&quot;.into(), b: 2};
+    println!(&quot;Result: {}&quot;, op);
+    Ok(())
 }
 </code></pre></pre>
+<h2 id="musterlösung"><a class="header" href="#musterlösung">Musterlösung</a></h2>
 <ul>
-<li>Enums orienteren sich an der C-Notation</li>
-<li>Enums können aber mit weiteren Strukturen erweitert werden</li>
-<li>Auch Enums können mit Macros erweitert werden</li>
+<li><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2021&amp;gist=027444cd6b3cf41be45e4ae3fad83d30">Rust Playground</a></li>
 </ul>
-<pre><pre class="playground"><code class="language-rust editable">// Unterstützung für Gleichheits-Operator
-#[derive(Debug,PartialEq)]
-enum Status {
-    Ok,
-    GenericError(String),
-    ApplicationError { prio: u32, cause: String },
-}
-
-impl Status {
-    fn am_i_ok(&amp;self) -&gt; bool {
-        *self == Status::Ok
-    }
-}
-
-enum IpAddr {
-    V4(u8, u8, u8, u8),
-    V6(String),
-}
-
-fn main() {
-    let result: Status = Status::Ok;
-    println!(&quot;Ok {:?}&quot;, result);
-    println!(&quot;Ok? {:?}&quot;, result.am_i_ok());
-
-    let result = Status::GenericError(String::from(&quot;Something went wrong&quot;));
-    println!(&quot;{:?}&quot;, result);
-
-    let result = Status::ApplicationError { prio: 1, cause: String::from(&quot;Something more specific&quot;) };
-    println!(&quot;{:?}&quot;, result);
-}
-</code></pre></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="ch01-02-types.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="traits.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="ch01-04-memory.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="ch04-topics.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -256,11 +219,11 @@ fn main() {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="ch01-02-types.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="traits.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="ch01-04-memory.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="ch04-topics.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

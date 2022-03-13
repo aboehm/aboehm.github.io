@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Unittests - Chemnitzer Linux Tage 2022 - Einfach mal rust machen</title>
+        <title>Module, Crates und Sichtbarkeit - Chemnitzer Linux Tage 2022 - Einfach mal rust machen</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="ch00-basics.html"><strong aria-hidden="true">1.</strong> Grundlegendes zu Rust</a></li><li class="chapter-item expanded "><a href="ch01-topics.html"><strong aria-hidden="true">2.</strong> Grundlagen Teil 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-cargo.html"><strong aria-hidden="true">2.1.</strong> Cargo und unser erstes Program</a></li><li class="chapter-item expanded "><a href="ch01-02-types.html"><strong aria-hidden="true">2.2.</strong> Variablen, Funktionen, einfache Datentypen</a></li><li class="chapter-item expanded "><a href="ch01-03-structs.html"><strong aria-hidden="true">2.3.</strong> Selbstdefinierte Datentypen</a></li><li class="chapter-item expanded "><a href="ch01-04-memory.html"><strong aria-hidden="true">2.4.</strong> Speicherverwaltung</a></li><li class="chapter-item expanded "><a href="ch01-05-control.html"><strong aria-hidden="true">2.5.</strong> Kontrollfluß</a></li><li class="chapter-item expanded "><a href="ch01-99-task.html"><strong aria-hidden="true">2.6.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-topics.html"><strong aria-hidden="true">3.</strong> Grundlagen Teil 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-generics.html"><strong aria-hidden="true">3.1.</strong> Generics</a></li><li class="chapter-item expanded "><a href="ch02-02-ownership.html"><strong aria-hidden="true">3.2.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="ch02-03-lifetime.html"><strong aria-hidden="true">3.3.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="ch02-04-structure.html"><strong aria-hidden="true">3.4.</strong> Module, Crates und Sichtbarkeit</a></li><li class="chapter-item expanded "><a href="ch02-05-traits.html"><strong aria-hidden="true">3.5.</strong> Traits</a></li><li class="chapter-item expanded "><a href="ch02-99-task.html"><strong aria-hidden="true">3.6.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-tests.html" class="active"><strong aria-hidden="true">4.</strong> Unittests</a></li><li class="chapter-item expanded "><a href="ch04-async.html"><strong aria-hidden="true">5.</strong> Asynchrone Verarbeitung</a></li><li class="chapter-item expanded "><a href="ch03-webservice.html"><strong aria-hidden="true">6.</strong> Demo Webservice</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="programm.html"><strong aria-hidden="true">1.</strong> Programm</a></li><li class="chapter-item expanded "><a href="rust.html"><strong aria-hidden="true">2.</strong> Rust</a></li><li class="chapter-item expanded "><a href="ch01-topics.html"><strong aria-hidden="true">3.</strong> Grundlegendes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cargo.html"><strong aria-hidden="true">3.1.</strong> Cargo und unser erstes Program</a></li><li class="chapter-item expanded "><a href="types.html"><strong aria-hidden="true">3.2.</strong> Variablen, Funktionen, einfache Datentypen</a></li><li class="chapter-item expanded "><a href="structs.html"><strong aria-hidden="true">3.3.</strong> Selbstdefinierte Datentypen</a></li><li class="chapter-item expanded "><a href="control.html"><strong aria-hidden="true">3.4.</strong> Kontrollfluß</a></li><li class="chapter-item expanded "><a href="ch01-task.html"><strong aria-hidden="true">3.5.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-topics.html"><strong aria-hidden="true">4.</strong> Ownership-Konzept</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="memory.html"><strong aria-hidden="true">4.1.</strong> Speicherverwaltung</a></li><li class="chapter-item expanded "><a href="ownership.html"><strong aria-hidden="true">4.2.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="lifetime.html"><strong aria-hidden="true">4.3.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="ch02-task.html"><strong aria-hidden="true">4.4.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-topics.html"><strong aria-hidden="true">5.</strong> Abstraktionen</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="generics.html"><strong aria-hidden="true">5.1.</strong> Generics</a></li><li class="chapter-item expanded "><a href="traits.html"><strong aria-hidden="true">5.2.</strong> Traits</a></li><li class="chapter-item expanded "><a href="ch03-task.html"><strong aria-hidden="true">5.3.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch04-topics.html"><strong aria-hidden="true">6.</strong> Struktur, Tests, Dokumentation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="structure.html" class="active"><strong aria-hidden="true">6.1.</strong> Module, Crates und Sichtbarkeit</a></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">6.2.</strong> Testing</a></li><li class="chapter-item expanded "><a href="docs.html"><strong aria-hidden="true">6.3.</strong> Dokumentation</a></li></ol></li><li class="chapter-item expanded "><a href="async.html"><strong aria-hidden="true">7.</strong> Asynchrone Verarbeitung</a></li><li class="chapter-item expanded "><a href="webservice.html"><strong aria-hidden="true">8.</strong> Demo Webservice</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -142,17 +142,75 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="unittests"><a class="header" href="#unittests">Unittests</a></h1>
+                        <h1 id="crates-module-sichtbarkeit"><a class="header" href="#crates-module-sichtbarkeit">Crates, Module, Sichtbarkeit</a></h1>
+<ul>
+<li>Jedes Cargo Projekt ist automatisch ein <code>crate</code></li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable">struct MyStruct;
+
+fn main() {
+    let a = crate::MyStruct;
+}
+</code></pre></pre>
+<ul>
+<li>Applikationen, wenn nicht anders definiert, nutzen meist die Datei <code>main.rs</code></li>
+<li>Libraries, nutzen <code>lib.rs</code></li>
+</ul>
+<h1 id="module-und-sichtbarkeit"><a class="header" href="#module-und-sichtbarkeit">Module und Sichtbarkeit</a></h1>
+<ul>
+<li>Crates können Applikationen oder Libraries für Funktionen, Datenstrukturen, Makros, ... sein</li>
+<li>Module bilden Namensräume die ganze oder nur Teile daraus über <code>use</code> importiert werden können</li>
+<li>Nur auf Datentypen, Funktionen und Module, die als <code>pub</code> deklariert sind, kann von außen zugegriffen werden</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust editable">mod my_module {
+    pub struct MyPublicStruct { }
+
+    impl MyPublicStruct {
+        pub fn public_func(&amp;self) { }
+
+        fn private_func() { }
+    }
+
+    struct MyPrivateStruct { }
+
+    impl MyPrivateStruct {
+        fn func(&amp;self) { }
+    }
+}
+
+use my_module::{MyPublicStruct};
+
+fn main() {
+    MyPublicStruct { }.public_func();
+    // alternativ, kann aber Probleme mit Traits machen
+    my_module::MyPublicStruct { }.public_func();
+}
+</code></pre></pre>
+<ul>
+<li>Module können auch ohne weiteres in andere Dateien ausgelagert werden</li>
+<li>Hierfür muss nur der Modulname deklariert werden und der Kompiler bezieht die Datei mit ein</li>
+</ul>
+<pre><code class="language-rust compile_fail noplayground should_panic">pub mod my_module;
+
+use my_module::{MyPublicStruct};
+
+fn main() {
+    MyPublicStruct { };
+}
+</code></pre>
+<pre><code class="language-rust compile_fail noplayground should_panic">// my_module.rs oder my_module/mod.rs
+pub struct MyPublicStruct { }
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="ch02-99-task.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="ch04-topics.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="ch04-async.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="testing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -162,11 +220,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="ch02-99-task.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="ch04-topics.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="ch04-async.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="testing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Übungsaufgabe - Chemnitzer Linux Tage 2022 - Einfach mal rust machen</title>
+        <title>Rust - Chemnitzer Linux Tage 2022 - Einfach mal rust machen</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="ch00-basics.html"><strong aria-hidden="true">1.</strong> Grundlegendes zu Rust</a></li><li class="chapter-item expanded "><a href="ch01-topics.html"><strong aria-hidden="true">2.</strong> Grundlagen Teil 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-cargo.html"><strong aria-hidden="true">2.1.</strong> Cargo und unser erstes Program</a></li><li class="chapter-item expanded "><a href="ch01-02-types.html"><strong aria-hidden="true">2.2.</strong> Variablen, Funktionen, einfache Datentypen</a></li><li class="chapter-item expanded "><a href="ch01-03-structs.html"><strong aria-hidden="true">2.3.</strong> Selbstdefinierte Datentypen</a></li><li class="chapter-item expanded "><a href="ch01-04-memory.html"><strong aria-hidden="true">2.4.</strong> Speicherverwaltung</a></li><li class="chapter-item expanded "><a href="ch01-05-control.html"><strong aria-hidden="true">2.5.</strong> Kontrollfluß</a></li><li class="chapter-item expanded "><a href="ch01-99-task.html"><strong aria-hidden="true">2.6.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-topics.html"><strong aria-hidden="true">3.</strong> Grundlagen Teil 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-generics.html"><strong aria-hidden="true">3.1.</strong> Generics</a></li><li class="chapter-item expanded "><a href="ch02-02-ownership.html"><strong aria-hidden="true">3.2.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="ch02-03-lifetime.html"><strong aria-hidden="true">3.3.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="ch02-04-structure.html"><strong aria-hidden="true">3.4.</strong> Module, Crates und Sichtbarkeit</a></li><li class="chapter-item expanded "><a href="ch02-05-traits.html"><strong aria-hidden="true">3.5.</strong> Traits</a></li><li class="chapter-item expanded "><a href="ch02-99-task.html" class="active"><strong aria-hidden="true">3.6.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-tests.html"><strong aria-hidden="true">4.</strong> Unittests</a></li><li class="chapter-item expanded "><a href="ch04-async.html"><strong aria-hidden="true">5.</strong> Asynchrone Verarbeitung</a></li><li class="chapter-item expanded "><a href="ch03-webservice.html"><strong aria-hidden="true">6.</strong> Demo Webservice</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="programm.html"><strong aria-hidden="true">1.</strong> Programm</a></li><li class="chapter-item expanded "><a href="rust.html" class="active"><strong aria-hidden="true">2.</strong> Rust</a></li><li class="chapter-item expanded "><a href="ch01-topics.html"><strong aria-hidden="true">3.</strong> Grundlegendes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cargo.html"><strong aria-hidden="true">3.1.</strong> Cargo und unser erstes Program</a></li><li class="chapter-item expanded "><a href="types.html"><strong aria-hidden="true">3.2.</strong> Variablen, Funktionen, einfache Datentypen</a></li><li class="chapter-item expanded "><a href="structs.html"><strong aria-hidden="true">3.3.</strong> Selbstdefinierte Datentypen</a></li><li class="chapter-item expanded "><a href="control.html"><strong aria-hidden="true">3.4.</strong> Kontrollfluß</a></li><li class="chapter-item expanded "><a href="ch01-task.html"><strong aria-hidden="true">3.5.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-topics.html"><strong aria-hidden="true">4.</strong> Ownership-Konzept</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="memory.html"><strong aria-hidden="true">4.1.</strong> Speicherverwaltung</a></li><li class="chapter-item expanded "><a href="ownership.html"><strong aria-hidden="true">4.2.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="lifetime.html"><strong aria-hidden="true">4.3.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="ch02-task.html"><strong aria-hidden="true">4.4.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-topics.html"><strong aria-hidden="true">5.</strong> Abstraktionen</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="generics.html"><strong aria-hidden="true">5.1.</strong> Generics</a></li><li class="chapter-item expanded "><a href="traits.html"><strong aria-hidden="true">5.2.</strong> Traits</a></li><li class="chapter-item expanded "><a href="ch03-task.html"><strong aria-hidden="true">5.3.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch04-topics.html"><strong aria-hidden="true">6.</strong> Struktur, Tests, Dokumentation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="structure.html"><strong aria-hidden="true">6.1.</strong> Module, Crates und Sichtbarkeit</a></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">6.2.</strong> Testing</a></li><li class="chapter-item expanded "><a href="docs.html"><strong aria-hidden="true">6.3.</strong> Dokumentation</a></li></ol></li><li class="chapter-item expanded "><a href="async.html"><strong aria-hidden="true">7.</strong> Asynchrone Verarbeitung</a></li><li class="chapter-item expanded "><a href="webservice.html"><strong aria-hidden="true">8.</strong> Demo Webservice</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -142,72 +142,110 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="Übungsaufgabe"><a class="header" href="#Übungsaufgabe">Übungsaufgabe</a></h1>
-<h2 id="ziel"><a class="header" href="#ziel">Ziel</a></h2>
+                        <h2 id="was-ist-rust-eigentlich"><a class="header" href="#was-ist-rust-eigentlich">Was ist Rust eigentlich?</a></h2>
 <ul>
-<li>Erweiterung unseres Rechners</li>
+<li>Programmiersprache für <a href="https://doc.rust-lang.org/nightly/rustc/platform-support.html">verschiedene Plattformen</a> wie x86, ARM, Webassembly für den Browser</li>
+<li>Sprache wird kompiliert und nicht interpretiert</li>
+<li>Kompiler heißt <code>rustc</code>, der auf LLVM basiert, GCC Frontend auch möglich</li>
+<li>Paketmanager heißt <code>cargo</code></li>
+<li>Bibliotheken/Anwendungen sind in <code>crates</code> organisiert</li>
+<li>Weiterentwicklung wird von der <a href="https://foundation.rust-lang.org/">Rust Foundation</a> organsiert, Gründer waren neben <a href="https://foundation.rust-lang.org/members/">Mozilla, u.a. Amazon, Google &amp; Huawei</a></li>
 </ul>
-<h1 id=""><a class="header" href="#"></a></h1>
-<pre><pre class="playground"><code class="language-rust should_panic">use std::io;
-
-#[derive(Debug)]
-enum Operation {
-    Add,
-    Sub,
-    Mul,
-    Div,
-}
-
-fn operate(a: i32, op: Operation, b: i32) -&gt; Result&lt;i32, &amp;'static str&gt; {
-    match op {
-        Operation::Div =&gt; match b {
-            0 =&gt; Err(&quot;Division by Zero&quot;),
-            _ =&gt; Ok(a/b),
-        },
-        Operation::Add =&gt; Ok(a+b),
-        Operation::Sub =&gt; Ok(a-b),
-        Operation::Mul =&gt; Ok(a*b),
-    }
-}
-
-fn read_integer_from_stdin() -&gt; Result&lt;i32, &amp;'static str&gt; {
-    println!(&quot;Value? &quot;);
-    let mut input = String::new();
-    io::stdin().read_line(&amp;mut input).unwrap();
-    input.trim().parse().map_err(|_| &quot;Not a number&quot;)
-}
-
-fn read_op_from_stdin() -&gt; Result&lt;Operation, &amp;'static str&gt; {
-    println!(&quot;Operation? &quot;);
-    let mut input = String::new();
-    io::stdin().read_line(&amp;mut input).unwrap();
-    match input.trim() {
-        &quot;+&quot; =&gt; Ok(Operation::Add),
-        &quot;-&quot; =&gt; Ok(Operation::Sub),
-        &quot;*&quot; =&gt; Ok(Operation::Mul),
-        &quot;/&quot; =&gt; Ok(Operation::Div),
-        _   =&gt; Err(&quot;Operation not implemented&quot;),
-    }
-}
-
-fn main() -&gt; Result&lt;(), &amp;'static str&gt; {
-    let a = read_integer_from_stdin()?;
-    let op = read_op_from_stdin()?;
-    let b = read_integer_from_stdin()?;
-    println!(&quot;Result: {}&quot;, operate(a, op, b).expect(&quot;A result&quot;));
-    Ok(())
-}
-</code></pre></pre>
+<h2 id="ein-kurze-geschichte"><a class="header" href="#ein-kurze-geschichte">Ein kurze Geschichte</a></h2>
+<p>Es war einmal ein Browserhersteller namens Mozilla, der hatte viel C/C++ Code.</p>
+<p>Mehrkernprozessoren wurden immer verbreiteter und paralelle Code-Ausführung wurde immer wichtiger.</p>
+<p>Parallele Code-Ausführung für C/C++ ist aber aufwendig, kompliziert und es gilt vieles zu bedenken.</p>
+<p>Tools gibt es zur genüge für Code-Analyse, aber viele Dinge können davon auch nicht abgefangen werden.</p>
+<p>Menschen produzieren unvermeidlich Programmierfehler. Programme stürzen ab und verursachen Sicherheitslücken.</p>
+<p>Um das zuvermeiden gab es keine sinnvolle Programmiersprache.</p>
+<h2 id="was-macht-die-sprache-aus"><a class="header" href="#was-macht-die-sprache-aus">Was macht die Sprache aus?</a></h2>
+<ul>
+<li>systemnah</li>
+<li>bietet ein Ausführungsgeschwindigkeiten und Optimierungen wie C/C++</li>
+<li>in Zukunft auch im <a href="https://github.com/Rust-for-Linux">Linux Kernel</a> vertreten</li>
+<li>durch verschiedene Sprachkonstrukte wird sicherer Code produziert</li>
+<li>Nutzt viele Konzepte aus bereits existierenden Sprachen
+<ul>
+<li>Starke Typisierung </li>
+<li>Abstraction by Zero Cost (<code>Templates</code>, <code>Generics</code>)
+<ul>
+<li>Einführung von komplexen Abstraktionen</li>
+<li>Kombinationen von verschiedenen abhängigen Implementierungen</li>
+<li>Ausführung von nur benötigten Bestandteilen der Abstraktionen</li>
+</ul>
+</li>
+<li>Funktionale Ansätze
+<ul>
+<li>Jede Methode ist eine Funktion</li>
+<li>Map/Reduce</li>
+</ul>
+</li>
+<li>Keine Objektorientiertung, stattdessen Traits und Implementierungen
+<ul>
+<li>Defintion eines gemeinsamen Verhaltens</li>
+<li>Traits werden durch Implementierungen für Typen umgesetzt</li>
+</ul>
+</li>
+<li>Pointer und Referenzen</li>
+<li>Explizite Deklaration von unsicheren Bereichen (<code>unsafe</code>) für die Kompatiblität zu C-Implementierungen</li>
+</ul>
+</li>
+<li>Implizite Speicherverwaltung
+<ul>
+<li>Keine Garbage Colleciton wie <code>golang</code>, <code>Java</code> oder <code>C#</code></li>
+<li>Viele Operationen finden nur auf dem Stack statt</li>
+<li>Variablen sind bei der Deklaration standardmäßig nicht veränderlich</li>
+</ul>
+</li>
+<li>Befragung für 2021</li>
+</ul>
+<p><img src="rust-adoption.png" alt="Ergebnis Quelle: Rust Blog" /></p>
+<h2 id="sicherheit-durch-ausdruck"><a class="header" href="#sicherheit-durch-ausdruck">Sicherheit durch Ausdruck</a></h2>
+<ul>
+<li>Ownership-Konzept
+<ul>
+<li>Instanziierte Speicherobjekte haben zu jeder Zeit immer einen Besitzer</li>
+<li>Variablen wechseln den Besitzer oder müssen an dessen ausgeliehen (Borrow) werden</li>
+<li>Borrow-Checker
+<ul>
+<li>Prüft ob der Besitz geklärt ist</li>
+<li>Prüft ob eine Variable verändert werden darf, d.h wird an verschiedene Stellen zeitgleich darauf zugegeriffen und gar verändert, führt dies zu einem Kompilierfehler</li>
+<li>dies bricht an vielen Stellen mit den gewohnten Konzepten von anderen Programmiersprachen (Singleton)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Lifetime Checker
+<ul>
+<li>Analyse des Scopes, der enthaltenen Variablen und deren Referenzen</li>
+<li>Die Lebenszeit von Speicherobjekten muss zu jeder Zeit bekannt sein</li>
+<li>Die Lebenszeit eines Speicherobjekts endet in der Regel mit dem Verlassen des Scopes</li>
+</ul>
+</li>
+</ul>
+<h2 id="installation"><a class="header" href="#installation">Installation</a></h2>
+<ul>
+<li>Vollständige Installation übr <a href="https://rustup.rs/">rustup.rs</a></li>
+<li>Alternativ kann auch der <a href="https://play.rust-lang.org/">Rust Playground</a> verwendet werden</li>
+</ul>
+<h1 id="lust-auf-mehr-rust"><a class="header" href="#lust-auf-mehr-rust">Lust auf mehr Rust</a></h1>
+<ul>
+<li><a href="https://doc.rust-lang.org/rust-by-example/index.html">Rust by Example</a></li>
+<li><a href="https://doc.rust-lang.org/book/">Rust Book</a></li>
+<li><a href="https://doc.rust-lang.org/std/index.html">Dokumentation der Standardbibliothek</a></li>
+<li><a href="https://prev.rust-lang.org/de-DE/faq.html">FAQ</a></li>
+<li><a href="https://crates.io">Rust Pakete bei crates.io</a></li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="ch02-05-traits.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="programm.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="ch03-tests.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="ch01-topics.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -217,11 +255,11 @@ fn main() -&gt; Result&lt;(), &amp;'static str&gt; {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="ch02-05-traits.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="programm.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="ch03-tests.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="ch01-topics.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

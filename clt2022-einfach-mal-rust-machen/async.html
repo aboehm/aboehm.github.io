@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Cargo und unser erstes Program - Chemnitzer Linux Tage 2022 - Einfach mal rust machen</title>
+        <title>Asynchrone Verarbeitung - Chemnitzer Linux Tage 2022 - Einfach mal rust machen</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="ch00-basics.html"><strong aria-hidden="true">1.</strong> Grundlegendes zu Rust</a></li><li class="chapter-item expanded "><a href="ch01-topics.html"><strong aria-hidden="true">2.</strong> Grundlagen Teil 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-cargo.html" class="active"><strong aria-hidden="true">2.1.</strong> Cargo und unser erstes Program</a></li><li class="chapter-item expanded "><a href="ch01-02-types.html"><strong aria-hidden="true">2.2.</strong> Variablen, Funktionen, einfache Datentypen</a></li><li class="chapter-item expanded "><a href="ch01-03-structs.html"><strong aria-hidden="true">2.3.</strong> Selbstdefinierte Datentypen</a></li><li class="chapter-item expanded "><a href="ch01-04-memory.html"><strong aria-hidden="true">2.4.</strong> Speicherverwaltung</a></li><li class="chapter-item expanded "><a href="ch01-05-control.html"><strong aria-hidden="true">2.5.</strong> Kontrollfluß</a></li><li class="chapter-item expanded "><a href="ch01-99-task.html"><strong aria-hidden="true">2.6.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-topics.html"><strong aria-hidden="true">3.</strong> Grundlagen Teil 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-generics.html"><strong aria-hidden="true">3.1.</strong> Generics</a></li><li class="chapter-item expanded "><a href="ch02-02-ownership.html"><strong aria-hidden="true">3.2.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="ch02-03-lifetime.html"><strong aria-hidden="true">3.3.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="ch02-04-structure.html"><strong aria-hidden="true">3.4.</strong> Module, Crates und Sichtbarkeit</a></li><li class="chapter-item expanded "><a href="ch02-05-traits.html"><strong aria-hidden="true">3.5.</strong> Traits</a></li><li class="chapter-item expanded "><a href="ch02-99-task.html"><strong aria-hidden="true">3.6.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-tests.html"><strong aria-hidden="true">4.</strong> Unittests</a></li><li class="chapter-item expanded "><a href="ch04-async.html"><strong aria-hidden="true">5.</strong> Asynchrone Verarbeitung</a></li><li class="chapter-item expanded "><a href="ch03-webservice.html"><strong aria-hidden="true">6.</strong> Demo Webservice</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="programm.html"><strong aria-hidden="true">1.</strong> Programm</a></li><li class="chapter-item expanded "><a href="rust.html"><strong aria-hidden="true">2.</strong> Rust</a></li><li class="chapter-item expanded "><a href="ch01-topics.html"><strong aria-hidden="true">3.</strong> Grundlegendes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cargo.html"><strong aria-hidden="true">3.1.</strong> Cargo und unser erstes Program</a></li><li class="chapter-item expanded "><a href="types.html"><strong aria-hidden="true">3.2.</strong> Variablen, Funktionen, einfache Datentypen</a></li><li class="chapter-item expanded "><a href="structs.html"><strong aria-hidden="true">3.3.</strong> Selbstdefinierte Datentypen</a></li><li class="chapter-item expanded "><a href="control.html"><strong aria-hidden="true">3.4.</strong> Kontrollfluß</a></li><li class="chapter-item expanded "><a href="ch01-task.html"><strong aria-hidden="true">3.5.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-topics.html"><strong aria-hidden="true">4.</strong> Ownership-Konzept</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="memory.html"><strong aria-hidden="true">4.1.</strong> Speicherverwaltung</a></li><li class="chapter-item expanded "><a href="ownership.html"><strong aria-hidden="true">4.2.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="lifetime.html"><strong aria-hidden="true">4.3.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="ch02-task.html"><strong aria-hidden="true">4.4.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-topics.html"><strong aria-hidden="true">5.</strong> Abstraktionen</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="generics.html"><strong aria-hidden="true">5.1.</strong> Generics</a></li><li class="chapter-item expanded "><a href="traits.html"><strong aria-hidden="true">5.2.</strong> Traits</a></li><li class="chapter-item expanded "><a href="ch03-task.html"><strong aria-hidden="true">5.3.</strong> Übungsaufgabe</a></li></ol></li><li class="chapter-item expanded "><a href="ch04-topics.html"><strong aria-hidden="true">6.</strong> Struktur, Tests, Dokumentation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="structure.html"><strong aria-hidden="true">6.1.</strong> Module, Crates und Sichtbarkeit</a></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">6.2.</strong> Testing</a></li><li class="chapter-item expanded "><a href="docs.html"><strong aria-hidden="true">6.3.</strong> Dokumentation</a></li></ol></li><li class="chapter-item expanded "><a href="async.html" class="active"><strong aria-hidden="true">7.</strong> Asynchrone Verarbeitung</a></li><li class="chapter-item expanded "><a href="webservice.html"><strong aria-hidden="true">8.</strong> Demo Webservice</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -142,79 +142,118 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="cargo"><a class="header" href="#cargo">Cargo</a></h1>
-<p>Zuerst erstellen wir ein Standardprojekt für eine Applikation</p>
-<pre><code class="language-sh">cargo new my-simple-project
-</code></pre>
-<p><code>cargo</code> erstellt uns dann folgende Dateien</p>
+                        <h1 id="asynchrone-verarbeitung"><a class="header" href="#asynchrone-verarbeitung">Asynchrone Verarbeitung</a></h1>
 <ul>
-<li>Cargo.toml   # Projektbeschreibung mit all seinen Abhängigkeiten </li>
-<li>src/main.rs  # Unser erstes Programm</li>
-</ul>
-<p>Dann können wir das Projekt auch sofort bauen</p>
-<pre><code class="language-sh">cd my-simple-project
-cargo build
-</code></pre>
-<p>und auch starten</p>
-<pre><code class="language-sh">cargo run
-</code></pre>
-<p>Das Result sollte dann so aussehen</p>
-<pre><code class="language-text">Hello, world!
-</code></pre>
-<p>Die optimierte Variante wird wie folgt erstellt:</p>
-<pre><code class="language-sh">cargo build --release
-</code></pre>
-<h2 id="die-cargotoml"><a class="header" href="#die-cargotoml">Die Cargo.toml</a></h2>
-<p>Die <a href="Cargo.toml">Cargo.toml</a> verwaltet grundsätzliche Dinge zum Projekt, wie:</p>
+<li>Selbst heutige Mikrokontroller sind Mehrprozessorsystem</li>
+<li>Die parallele Ausführung von Code spart oft nicht nur Zeit sondern auch Energie</li>
+<li>An vielen Stellen kann auch ein Programm auf Daten warten, d.h. Aufgaben können aufgeschoben werden, wenn sie notwendig sind</li>
+<li>Rust nutzt hier für die <code>async</code>/<code>await</code> Syntax
 <ul>
-<li>Projektdefintion selbst
-<ul>
-<li>Name</li>
-<li>Beschreibung</li>
-<li>Version</li>
-<li>Rust-Version</li>
-<li>Links zum Repository</li>
-<li>Veröffentlichungsregeln</li>
+<li>eine Funktion ist <code>async</code>hron</li>
+<li>auf der Ergebnis einer asynchronen Funkten muss gewartet werden (<code>await</code>)</li>
 </ul>
 </li>
-<li>Paketabhängigkeiten
+<li>In der Vergangenheit wurden nebenläufige Funktionen oft mit Threads des Betriebssystems umgesetzt
 <ul>
-<li>Versionen</li>
-<li>Features</li>
-<li>Lokale Quellverzeichnisse / Git Repositories</li>
+<li>relativ schwergewichtig sowohl für CPU als auch Arbeitsspeicher</li>
+<li>fast überall einsetzbar</li>
 </ul>
 </li>
-<li>Unterprojekte</li>
+<li>Durch die Integration in der Sprache, kann der Kompiler besser darüber entscheiden</li>
+<li>asynchrone Funktionen können Rust in einer Runtime ausgeführt werden
+<ul>
+<li>Die Runtime entscheidet, wann welcher Funktion ausgeführt wird und verwaltet die Ausführung über mehrere Threads</li>
+<li>Eine klassische Ausführung über Threads mit Rusts selbst ist möglich</li>
+<li>Bekannte Vertreter für Runtimes sind <code>tokio</code> und <code>async-std</code></li>
 </ul>
-<p>Für unser erstes Projekt ist dies noch recht klein:</p>
-<pre><code class="language-toml">[package]
-name = &quot;my-simple-project&quot;
-version = &quot;0.1.0&quot;
-edition = &quot;2021&quot;
+</li>
+<li>async Traits werden zurzeit nicht von Rust nativ unterstützt, dafür kann aber das <a href="https://github.com/dtolnay/async-trait">async-trait</a> crate genutzt werden</li>
+</ul>
+<h2 id="probleme-von-nebenläufigkeit"><a class="header" href="#probleme-von-nebenläufigkeit">Probleme von Nebenläufigkeit</a></h2>
+<h3 id="verwendung-von-gemeinsamen-speicher"><a class="header" href="#verwendung-von-gemeinsamen-speicher">Verwendung von gemeinsamen Speicher</a></h3>
+<ul>
+<li>Nur lesen ist einfach</li>
+<li>Wird Speicher verändert müssen die Zugriffe verwaltet werden</li>
+<li>Verwaltung kostet Leistung</li>
+</ul>
+<p>Lösung:</p>
+<ul>
+<li>Um dies besser zu implementiert, kommt uns der Borrow-Checker zu Hilfe</li>
+<li>Explizter Ausdrücke für veränderliche Speicherbereihe</li>
+<li>Borrow-Konzept markiert Bereiche die veränderlich/unveränderlich sind</li>
+<li>Shared-Nothing-Konzepte sollen bevorzugt werden, hierfür können bspw. <code>Channel</code> verwendet werden, um zwischen Funktionen Speicherbereiche zu &quot;versenden&quot;</li>
+<li>Synchronisierungsobjekte wie <code>Mutex</code> oder Verwendung von Objekten, die <code>Send</code> und <code>Sync</code> Traits implementieren</li>
+</ul>
+<h3 id="lebenszeit-von-speicher"><a class="header" href="#lebenszeit-von-speicher">Lebenszeit von Speicher</a></h3>
+<ul>
+<li>Solange Speicher von Funktionen nur auf dem Stack stattfindet ist es einfacher</li>
+<li>Speicherbereiche müssen allokiert werden und ggf. ausgetauscht werden</li>
+<li>Mehrere getrennte Funktionen greifen unabhängig auf Speicher zu</li>
+</ul>
+<p>Lösung:</p>
+<ul>
+<li>Referenzzähler für eine asynchrone Verarbeitung, da Nutzung von Objekten nicht mehr im Voraus planbar ist</li>
+<li>statische Lebenszeit für Objekte</li>
+</ul>
+<h2 id="beispiel"><a class="header" href="#beispiel">Beispiel</a></h2>
+<pre><code class="language-rust compile_fail noplayground">use std::sync::mpsc;
+use std::sync::mpsc::{Receiver, Sender};
+use tokio::task;
+use tokio::time::{sleep, Duration};
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+/// Produziert Werte sendet sie über den Channel
+async fn async_producer(tx: Sender&lt;u32&gt;, number: u32) {
+    loop {
+        let value: u32 = rand::random::&lt;u32&gt;() % 1000;
+        println!(&quot;{:02}: Sende {}&quot;, number, value);
 
-[dependencies]
+        let res = tx.send(value);
+        if res.is_err() {
+            break;
+        }
+
+        let delay = value + 1000u32;
+        sleep(Duration::from_millis(delay.into())).await;
+    }
+}
+
+/// Konsumiert die Werte aus dem Channel. Nach `count` Werten wird die Ausführung beendet
+async fn async_consumer(rx: Receiver&lt;u32&gt;, count: u32) {
+    for _ in 0..count {
+        let value = rx.recv().unwrap();
+        println!(&quot;Empfangen: {}&quot;, value);
+    }
+}
+
+/// Ausführung in Tokio Runtime.
+///
+/// ```
+/// let rt = tokio::runtime::Runtime::new().unwrap();
+/// rt.block_on(async {
+///   // async code
+/// });
+/// ```
+#[tokio::main]
+async fn main() {
+    let (tx, rx): (Sender&lt;u32&gt;, Receiver&lt;u32&gt;) = mpsc::channel();
+
+    for num in 0..7 {
+        task::spawn(async_producer(tx.clone(), num.clone()));
+    }
+
+    task::spawn(async_consumer(rx, 10)).await.unwrap();
+}
 </code></pre>
-<p>Wird ein Build erzeugt, werden die abhängigen <code>crate</code> Versionen in der <code>Cargo.lock</code> festgehalten. Es wird generell empfohlen Versionen zu pinnen.</p>
-<p>Die <a href="Cargo.toml">Cargo.toml</a> zu diesem Projekt ist dann etwas komplexer.</p>
-<p>Die komplette Referenz, könnt ihr auf der <a href="https://doc.rust-lang.org/cargo/reference/manifest.html"><code>cargo</code>-Dokumentationseite</a> finden.</p>
-<h2 id="cargo-für-rust-programme"><a class="header" href="#cargo-für-rust-programme">Cargo für Rust Programme</a></h2>
-<p><code>cargo</code> kann nicht nur verwendet werden, um Rust Projekte zu erstellen und zu bauen. Es kann auch dazu verwnedet werden, um Applikationen zu installieren.</p>
-<p>Beispielsweise um dieses Tutorial wurde <code>mdbook</code> verwendet, was mittels</p>
-<pre><code class="language-sh">cargo install mdbook
-</code></pre>
-<p>installiert wurde. Die fertige Anwendung wird dann standardmäßig in <code>~/.cargo/bin</code> abgelegt.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="ch01-topics.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="docs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="ch01-02-types.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="webservice.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -224,11 +263,11 @@ edition = &quot;2021&quot;
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="ch01-topics.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="docs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="ch01-02-types.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="webservice.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
