@@ -900,9 +900,10 @@ struct CopyableItem { value: u32, }
 <li>Ist dies nicht eindeutig geklärt, wird der Kompiler einen Fehler werfen</li>
 </ul>
 <pre><pre class="playground"><code class="language-rust editable should_panic"><span class="boring">fn main() {
-</span>    let owned = 1;
-    let next_owner = owned;
-    println!(&quot;owned = {}&quot;, owned);           // Schlägt fehl
+</span>    let mut owned = 1;
+    let next_owner = &amp;owned;
+    println!(&quot;owned = {}&quot;, owned);           // Leses ist Ok
+    owned = 2;                               // Schreiben schlägt fehl
     println!(&quot;next_owner = {}&quot;, next_owner); // next_owner ist der Besitzer
 <span class="boring">}
 </span></code></pre></pre>
