@@ -1,0 +1,957 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Metadata about the presentation -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Rust im Linux Kernel</title>
+
+    <meta name="description" content="Der Linux-Kernel ist in C und Assembler geschrieben. Linus Torvalds blockte in der Vergangenheit die Aufnahme von C++ kategorisch ab. Doch in 2022 schafften es Beiträge in den offiziellen Hauptentwicklungszweig, die die Unterstützung für die Entwicklung einer anderen Programmiersprache ermöglichen: das bei Mozilla 2006 entstandene Rust.  Rust verspricht bessere Ausdrucksmöglichkeiten und eine drastische Reduktion von bestimmten Sicherheitslücken bei ähnlicher Leistung wie C. Allerdings benötigt der Rust Compiler zusätzliche Abhängigkeiten (LLVM) und diverse Vorarbeiten (Abstractions, Bindings, Speichermanagement), um in allen Bereichen des Kernels nutzbar zu sein. Der Vortrag gibt einen historischen Abriss, geht auf Projekte und deren Herausforderungen in verschiedenen Dimensionen ein, stellt aktuelle Möglichkeiten in der Kernel-Entwicklung mit Rust dar und gibt einen Ausblick, was demnächst möglich sein soll.">
+    <meta name="author" content="Alexander Böhm">
+
+    <!-- Presentation Styles -->
+    <link rel="stylesheet" href="static/revealjs/dist/reset.css">
+    <link rel="stylesheet" href="static/revealjs/dist/reveal.css">
+
+    
+      <link rel="stylesheet" href="static/revealjs/dist/theme/white.css" id="theme">
+    
+
+    
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="static/revealjs/plugin/highlight/monokai.css" id="highlight-theme">
+  </head>
+
+  <body>
+    <!-- Presentation body -->
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  ## Rust im Linux Kernel
+
+<img src="media/Rust_for_Linux_logo.svg" alt="Logo Rust For Linux" width="30%"/>
+
+Alexander Böhm
+
+Chemnitzer Linux Tage, 11.03.2023
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Zu mir
+
+* Kein Kernel-Entwickler \
+  kleine Anpassungen & Experimente
+* Python, Java, C/C++
+* 2017 zaghafte Versuche mit Rust
+* Seit 1.5y täglich Rust
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Sprachverteilung 
+
+<img src="media/github-torvalds-linux-statistic.png" alt="C 98.5%, Assembly 0.8%" />
+
+
+<small>
+
+*Quelle: https://github.com/torvalds/linux, (Datum 4.3.23)*
+
+</small>
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Neben C & Assembler
+
+* Vereinzelte Projekte mit C++ und Ada
+* Out-Of-Tree Entwicklungen
+* 2006 Diskussion über C++: \
+  Absage von diversen Kernel Maintainern
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Gründe gegen C++
+
+* Komplexität Objekt-Orientierung
+* Behandlung Sprachfunktionen? \
+  Exceptions, Constructor, ...
+* Unzureichende Kompilerunterstützung
+* Strittige Kompatiblität mit C
+* Notwendige Kernel-Infrastruktur
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Sicherheitsaspekte
+
+<img src="media/mitre-cve-list-linux-kernel.png" alt="Liste von CVEs" />
+
+<small>
+
+*Quelle: cve.mitre.org, linux kernel (Datum 4.3.23)*
+
+</small>
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Kernel Developer zu Rust
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+#### Rust for Linux
+
+Miguel Ojeda, Wedson Almeida Filho, Alex Gaynor:
+
+> We believe Rust offers key improvements over C in this domain.
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+#### Asahi Linux
+
+Asahi Lina (M1 DRM Developer):
+
+> Rust is truly magical! [...] It really guides you towards not just safe but good design.
+
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Rust
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Geschichte
+
+* Entstanden bei Mozilla 2009: \
+  C/C++ zwar schnell, aber fehleranfällig
+* Einfache & sichere **Parallelisierung**
+* LLVM-Kompiler
+* 1. stabiles Release 2015
+* systemnahe Entwicklungen
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Eigenschaften
+
+* Strenge Typisierung
+* Hohe Speichersicherheit
+* Keine Garbage Collection
+* Zero-Cost Abstraction
+* Vergleichbare C/C++-Leistung
+* Anbindung zu C
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Konzepte
+
+<img src="media/concepts-wordcloud.svg" alt="Wordcloud mit Konzepten">
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Verbesserungen
+
+* Beispiel: Use after free
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+#### C
+
+```c
+// Rufe Funktion `do_something(-1)`
+void* do_something(int value) {
+    // Alloziiere Puffer
+    void* buf = malloc(1024);
+    if (value < 0) {
+        free(buf);
+        // Bug: return NULL vergessen
+    }
+    // Schreibe in Puffer
+    memcpy(buf, &value, sizeof(value));
+    // Gebe Pointer zurück
+    return buf;
+}
+```
+
+*GCC kompiliert ohne Fehler/Warnungen*
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+#### Rust
+
+```rust
+fn do_something(value: i32) -> Vec<u8> {
+    // Alloziiere Puffer auf veränderlicher Variable
+    let mut buf = Vec::with_capacity(1024);
+    if value < 0 {
+        // Gebe explizit Speicher frei
+        drop(buf);
+    }
+    // Schreibe in Puffer
+    buf.copy_from_slice(&value.to_be_bytes());
+    // Gebe Pointer zurück
+    return buf;
+}
+```
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+*Kompilerfehler*
+
+```rust
+error[E0382]: borrow of moved value: `buf`
+ --> src/main.rs:6:5
+2 |     let mut buf = Vec::with_capacity(1024);
+  |         ------- move occurs because `buf` has type ...
+3 |     if value < 0 {
+4 |         drop(buf);
+  |              --- value moved here
+5 |     }
+6 |     buf.copy_from_slice(&value.to_be_bytes());
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |     value borrowed here after move
+```
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+*Lösung erfordert Umbau*
+
+```rust
+fn do_something(value: i32) -> Option<Vec<u8>> {
+    let mut buf = Vec::with_capacity(1024);
+    if value < 0 {
+        // Gebe `buf` frei, da Scope verlassen wird
+        None
+    } else {
+        buf.copy_from_slice(&value.to_be_bytes());
+        // Übergebe Ownership von `buf` als Rückgabe
+        Some(buf)
+    }
+}
+```
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Weg in den Kernel
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Die Anfänge
+
+* 2012 LLVM Linux und Clang-Support
+* 2020 Linux Plumbers Conference: \
+  Vorschlag zum In-Tree Support von Rust
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Die Idee
+
+![Rust Module Design](media/rust-module-design.png)
+
+<small>
+
+*Quelle: [Rust for Linux, Miguel Ojeda, Wedson Almeida Filho (März 2022)](https://www.youtube.com/watch?v=fVEeqo40IyQ&list=PL85XCvVPmGQgL3lqQD5ivLNLfdAdxbE_u)*
+
+</small>
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### 6.1 LTS Kernel
+
+* Mitte Dezember 2022
+* Minimales Kernelmodul
+* Infrastruktur
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+![Rust Crate Infrastruktur](media/rust-infrastructure.png)
+
+<small>
+
+*Quelle: [Rust for Linux, Miguel Ojeda, Wedson Almeida Filho (März 2022)](https://www.youtube.com/watch?v=fVEeqo40IyQ&list=PL85XCvVPmGQgL3lqQD5ivLNLfdAdxbE_u)*
+
+</small>
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### 6.2er Kernel
+
+* Mitte Feburar 2023
+* String-Behandlung
+* Formater
+* VTables-Unterstützung
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Aktuelle Entwicklungen
+
+* netfilter
+* Moduleparameter
+* Dateisystemanbindung
+* TCP-Server
+* Einfache Treiber (Char/Misc Device)
+* Asynchronous Resource Counter
+* Synchronisationsprimitive (Mutex, Semaphore)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Erstes Kernelmodul
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Vorbereitung
+
+* Rust Abhängigkeiten
+
+```sh
+rustup override set 1.62.0
+rustup component add rust-src
+cargo install --locked --version 0.56.0 bindgen
+```
+
+* LLVM/Clang Abhängigkeiten
+
+```
+apt-get install -y clang-11 lld-11 llvm-11
+```
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### ⚠️  Starke Versionsbhängigkeit ⚠️ 
+
+* Meist abgestimmt auf konkrete Rust-Version
+
+```text
+*** Rust compiler 'rustc' is too new.
+    This may or may not work.
+***   Your version:     1.67.1
+***   Expected version: 1.62.0
+```
+
+* Führt teilweise zu Fehlern
+
+```text
+error: the feature `core_ffi_c` has been stable since 1.64.0
+       and no longer requires an attribute to enable
+```
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Rust Support aktivieren
+
+![General Setup -> Rust Support](media/linux-config-enable-rust.png)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Beispiele aktivieren
+
+![Kernel hacking -> Sample kernel code -> Rust samples](media/linux-config-enable-rust-sample.png)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Modul definieren
+
+```rust
+// SPDX-License-Identifier: GPL-2.0
+//! Rust module for CLT 2023
+use kernel::prelude::*;
+
+module! {
+    type: RustCltModule,
+    name: "rust_clt_module",
+    author: "Alexander Böhm",
+    description: "Rust Module for CLT 2023",
+    license: "GPL v2",
+}
+
+struct RustCltModule { name: &'static CStr }
+```
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Initialisierung implementieren
+
+```rust
+impl kernel::Module for RustCltModule {
+    fn init(
+        name: &'static CStr,
+        _module: &'static ThisModule
+    ) -> Result<Self> {
+        pr_info!("Hello CLT 2023 from kernel module {name}!");
+        Ok(Self { name })
+    }
+}
+```
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Unloading implementieren
+
+```rust
+impl Drop for RustCltModule {
+    fn drop(&mut self) {
+        pr_info!("Goodbye from kernel module {}!",
+                 self.name);
+    }
+}
+```
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Kernel bauen
+
+```
+make LLVM=1 bzImage modules
+```
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Modul ausprobieren
+
+```
+[    1.023889] rust_clt_module: Hello CLT 2023 from kernel 
+               module rust_clt_module!
+[    1.025889] rust_clt_module: Goodbye from kernel module
+               rust_clt_module!
+```
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Aussicht & TODOs
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Kernel
+
+* Keine Reimplementierung
+* Weitere Abstraktionen für Subsysteme
+* Testing
+* Tooling & Infrastruktur
+* Offene Fragen bzgl. Distribution
+* Weitere Architekturen (aarch64)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+#### Aussichtsreiche Module
+
+* Android IPC Binder
+* [GPU Treiber für M1 (Asahi Linux)](https://asahilinux.org)
+* [NVM Express Treiber](https://github.com/metaspace/linux/tree/nvme)
+* [9p Server](https://github.com/wedsonaf/linux/commits/9p)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Für Rust
+
+* Abstimmung
+* Eigene Primitive (bspw. `Arc`)
+* Kompiler-Anpassung
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### GCCRS
+
+<img src="media/gccrs-logo.png" width="33%">
+
+* Frontend für GCC
+* Erste experimentele Version \
+  für GCC 13.1
+* 2023:  Test Suite v1.49 bestehen
+* Kein Borrow-Checker
+* Ermöglicht mehr Architekturen
+* Zugriff auf GCC-Tooling
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Fazit
+
+* Rust ist im Kernel angelangt
+* Schnelle Entwicklung
+* Potentiale für sicheren Code
+* Zahlreiche offene Themen
+
+<small>
+<br/>
+<br/>
+<br/>
+
+Folien & Beispiele:
+[github.com/aboehm/CLT2023-rust-im-linux-kernel](https://github.com/aboehm/CLT2023-rust-im-linux-kernel)
+
+</small>
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Quellen/Referenzen
+
+* [Rust For Linux](https://github.com/Rust-for-Linux/linux/tree/rust/Documentation/rust)
+* [LKML: Vorschlag für Unterstützung von "in-tree" Rust Support](https://lore.kernel.org/lkml/CAKwvOdmuYc8rW_H4aQG4DsJzho=F+djd68fp7mzmBp3-wY--Uw@mail.gmail.com/T/#u)
+* [Google Security Blog: Memory Safe Languages in Android 13](https://security.googleblog.com/2022/12/memory-safe-languages-in-android-13.html)
+* [Linus Torvalds über C++ Pushbacks](http://www.uwsg.indiana.edu/hypermail/linux/kernel/0604.3/0964.html)
+* [Stackoverflow Developer Survey 2022](https://survey.stackoverflow.co/2022/)
+* [LWN: A first look at Rust in the 6.1 kernel](https://lwn.net/Articles/910762/)
+* [LWN: A pair of Rust kernel modules](https://lwn.net/Articles/907685/)
+* [Asahi Linux: Tales of the M1 GPU](https://asahilinux.org/2022/11/tales-of-the-m1-gpu/)
+* [How Rust supports the Linux Kernel](https://www.youtube.com/watch?v=1R6CxuUwA7E)
+* [Rust for Linux by Miguel Ojeda and Wedson Almeida Filho - Rust Linz, March 2022](https://www.youtube.com/watch?v=fVEeqo40IyQ)
+* [Rust for Linux: Status and Wishlist](https://www.youtube.com/watch?v=fVEeqo40IyQ&list=PL85XCvVPmGQgL3lqQD5ivLNLfdAdxbE_u)
+* [Rust for Linux, Rust CTCFT 2021](https://rust-lang.github.io/ctcft/slides/2021-11-22_-_Rust_CTCFT_-_Rust_for_Linux.pdf)
+* [Heise: Three Questions and Answers: Rust for Linux](https://www.heise.de/hintergrund/Three-Questions-and-Answers-Rust-for-Linux-7532262.html)
+* [GCCRS Kompiler](https://github.com/Rust-GCC/gccrs)
+
+                </textarea>
+              </section>
+            
+          
+        
+      </div>
+
+    </div>
+
+    <!-- Reveal.js script -->
+    <script src="static/revealjs/dist/reveal.js"></script>
+
+    <!-- Reveal.js plugins -->
+    <script src="static/revealjs/plugin/markdown/markdown.js"></script>
+    <script src="static/revealjs/plugin/highlight/highlight.js"></script>
+    <script src="static/revealjs/plugin/search/search.js"></script>
+    <script src="static/revealjs/plugin/notes/notes.js"></script>
+    <script src="static/revealjs/plugin/math/math.js"></script>
+    <script src="static/revealjs/plugin/zoom/zoom.js"></script>
+
+    <script>
+      Reveal.initialize({
+        math: {
+          mathjax: 'static/mathjax/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          // pass other options into `MathJax.Hub.Config()`
+          TeX: { Macros: { RR: "{\\bf R}" } }
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealSearch,
+          RevealNotes,
+          RevealMath,
+          RevealZoom
+        ]
+      });
+
+      Reveal.configure({"controls": false, "help": false, "history": true, "mobileViewDistance": 0, "progress": true, "slideNumber": true, "transition": "none", "viewDistance": 1});
+    </script>
+  </body>
+</html>
